@@ -1,0 +1,59 @@
+{
+  "manifest": {
+    "schema": "radiprotocol.package",
+    "version": 1,
+    "packageId": "КТ-грудная-клетка",
+    "releaseVersion": "1.0.0",
+    "protocolDoc": {
+      "schema": "radiprotocol.protocol",
+      "version": 1,
+      "id": "kt-chest-1",
+      "title": "КТ грудной клетки",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z",
+      "nodes": [
+        {
+          "id": "n-start-kt",
+          "kind": "start",
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(76, 175, 80, 0.28)",
+          "fields": {}
+        },
+        {
+          "id": "n-snip-kt",
+          "kind": "snippet",
+          "x": 0,
+          "y": 200,
+          "width": 100,
+          "height": 100,
+          "fields": {
+            "snippetPath": "заключение.md"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "e-n-start-kt-n-snip-kt",
+          "fromNodeId": "n-start-kt",
+          "toNodeId": "n-snip-kt"
+        }
+      ],
+      "layoutDirection": "LR"
+    },
+    "protocolSha256": "d47c0275ef364371ed095f09adfaf667a200fb20105428dac4778d377a389373",
+    "snippetFiles": [
+      {
+        "relPath": "заключение.md",
+        "sha256": "e4db89fac27b055d8d4eed230096cfa014fc9e354b00ccf0a8708825259df0ec"
+      }
+    ],
+    "catalogEntryId": "КТ-грудная-клетка",
+    "author": {
+      "displayName": "Roman Shulgha"
+    },
+    "publishedAt": "2026-01-01T00:00:00.000Z"
+  }
+}

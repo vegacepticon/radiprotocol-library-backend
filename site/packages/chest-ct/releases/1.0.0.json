@@ -1,0 +1,65 @@
+{
+  "manifest": {
+    "schema": "radiprotocol.package",
+    "version": 1,
+    "packageId": "chest-ct",
+    "releaseVersion": "1.0.0",
+    "protocolDoc": {
+      "schema": "radiprotocol.protocol",
+      "version": 1,
+      "id": "chest-ct-1",
+      "title": "Chest CT Protocol",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z",
+      "nodes": [
+        {
+          "id": "n-start-chest",
+          "kind": "start",
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(76, 175, 80, 0.28)",
+          "fields": {}
+        },
+        {
+          "id": "n-snip-chest",
+          "kind": "snippet",
+          "x": 0,
+          "y": 200,
+          "width": 100,
+          "height": 100,
+          "fields": {
+            "snippetPath": "lung-nodule.md"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "e-n-start-chest-n-snip-chest",
+          "fromNodeId": "n-start-chest",
+          "toNodeId": "n-snip-chest"
+        }
+      ],
+      "layoutDirection": "LR"
+    },
+    "protocolSha256": "3990aec842d9fb1f3e8d77f4c89c7534e9d650ac2d1038d5d7b90b832206d789",
+    "snippetFiles": [
+      {
+        "relPath": "lung-nodule.md",
+        "sha256": "27824a6bf6d0008348f1c270703eab0f8d7c8d25a5a4925e25cb390527a2a782"
+      }
+    ],
+    "catalogEntryId": "chest-ct",
+    "author": {
+      "displayName": "Roman Shulgha"
+    },
+    "publishedAt": "2026-01-01T00:00:00.000Z"
+  },
+  "snippetContents": [
+    {
+      "relPath": "lung-nodule.md",
+      "content": "# Lung nodule assessment\n\nDescribe location, size, and characteristics.\n"
+    }
+  ]
+}

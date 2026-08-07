@@ -1,0 +1,2 @@
+/catalog /catalog.json 200
+/packages/* /packages/:splat.json 200

@@ -1,0 +1,25 @@
+{
+  "name": "radiprotocol-library-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Phase-1 static registry backend for the RadiProtocol Community Library (served on Cloudflare Pages).",
+  "scripts": {
+    "typecheck": "tsc -noEmit -skipLibCheck",
+    "build": "npm run typecheck && npm run build:generate",
+    "build:generate": "node esbuild.config.mjs src/generator/generate.ts dist/generate.cjs",
+    "generate": "npm run build:generate && node dist/generate.cjs",
+    "check:wire-parity": "node scripts/check-wire-parity.mjs",
+    "check:regen-diff": "node scripts/check-regen-diff.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run check:regen-diff && npm run check:wire-parity && npm test"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "0.28.0",
+    "typescript": "6.0.2",
+    "vitest": "^4.1.2"
+  }
+}

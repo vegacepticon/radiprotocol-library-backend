@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "packageId": "chest-ct",
+      "title": "Chest CT Protocol",
+      "description": "A starter chest CT reporting protocol.",
+      "author": {
+        "displayName": "Roman Shulgha"
+      },
+      "latestVersion": "1.0.0",
+      "categories": [
+        "radiology",
+        "chest"
+      ],
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "packageId": "КТ-грудная-клетка",
+      "title": "КТ грудной клетки",
+      "description": "Протокол КТ грудной клетки (Cyrillic packageId round-trip).",
+      "author": {
+        "displayName": "Roman Shulgha"
+      },
+      "latestVersion": "1.0.0",
+      "categories": [
+        "radiology",
+        "chest"
+      ],
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "packageId": "chest ct",
+      "title": "Chest CT (space id)",
+      "description": "A package whose id contains a space (exercises %20 encoding).",
+      "author": {
+        "displayName": "Roman Shulgha"
+      },
+      "latestVersion": "1.0.0",
+      "categories": [
+        "radiology"
+      ],
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "serverTime": "2026-01-01T00:00:00.000Z"
+}
