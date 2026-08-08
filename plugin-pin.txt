@@ -2,4 +2,4 @@
 # Update deliberately: check out the plugin at the new rev, run `npm run check:wire-parity`,
 # fix any drift, then commit the new pin. The gate verifies the plugin checkout is at exactly this rev.
 # Use a FULL SHA (not an abbreviated one) so actions/checkout's `ref:` reliably resolves a commit.
-4c680bdef5d9b485369bf246c09e21873cb41212
+bf206f51611222e27e36bf9fdaf733ff5b6eedf9
