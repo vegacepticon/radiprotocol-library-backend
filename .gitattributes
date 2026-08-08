@@ -1,0 +1,8 @@
+# Normalize all text files to LF line endings.
+# Protects scripts/check-regen-diff.mjs raw-Buffer.equals byte gate on Windows
+# (core.autocrlf=true would otherwise check out site/**/*.json as CRLF while
+# the generator writes LF → every JSON file flagged as a byte-diff).
+# Cloudflare Pages serves LF fine; the excluded _redirects/_headers/404.html
+# are in STATIC_CONFIG (check-regen-diff.mjs:20) and skipped by the gate.
+# Also normalizes .ts/.mjs source for cross-platform consistency.
+* text=auto eol=lf
