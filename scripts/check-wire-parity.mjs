@@ -14,6 +14,7 @@ import path from 'node:path';
 import { createRequire } from 'node:module';
 import esbuild from 'esbuild';
 import { deriveDescriptor } from './lib/probe-descriptor.mjs';
+import { hashingParityError, probeIntegrity, canonicalProtocolJson } from './lib/hashing-parity.mjs';
 
 const errors = [];
 function fail(message) { errors.push(`❌ ${message}`); }
@@ -116,6 +117,31 @@ try {
     if (a !== b) fail(`guard "${name}" descriptors differ:\n    plugin:  ${a}\n    backend: ${b}`);
     else info(`OK: ${name} descriptors match`);
   }
+
+  console.log('\n▸ Probing hashing behavior (integrity.ts parity)…');
+  // D6 integrity parity: both copies must produce byte-identical SHA-256 hex digests and
+  // identical verifyIntegrity semantics (match → true; uppercase expected → true; mismatch →
+  // false, never throws). Bundled with the same loadGuards pattern as the descriptor guards,
+  // so the shared tmp cleanup in finally covers these bundles too. Runs unconditionally —
+  // even when the pin gate is red — since drift here is independent of the pinned rev: a
+  // probe against the wrong rev cannot pass silently (the pin gate still fails overall, and
+  // CI always checks out the pinned rev). The plugin's sha256Bytes export is deliberately
+  // excluded from parity — nothing wire-served or install-verified uses it; the absolute
+  // KAT/hex anchors in scripts/lib/hashing-parity.mjs guard against lockstep drift (both
+  // copies switching hash algorithm in one commit).
+  const pluginMod = await loadGuards([path.join(pluginRepoPath, 'src/library/integrity.ts')]);
+  const backendMod = await loadGuards(['src/wire-types/integrity.ts']);
+  const extraCases = [
+    // The exact byte stream the wire hash covers (seed.ts hashes JSON.stringify(doc, null, 2) + '\n').
+    { name: 'canonical protocolDoc (2-space pretty + \\n)', content: canonicalProtocolJson(r0.manifest.protocolDoc) },
+    // The raw snippet content string, as seeded (SHA-256 over the UTF-8 bytes, not the JSON).
+    { name: 'seed snippet content', content: r0.snippetContents[0].content },
+  ];
+  const pluginProbe = await probeIntegrity(pluginMod, extraCases);
+  const backendProbe = await probeIntegrity(backendMod, extraCases);
+  const hashingError = hashingParityError(pluginProbe, backendProbe);
+  if (hashingError) fail(hashingError);
+  else info('OK: integrity.ts hashing behavior matches (sha256String + verifyIntegrity)');
 } catch (e) {
   fail(`parity gate error: ${e.message}`);
 } finally {

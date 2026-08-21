@@ -40,3 +40,24 @@ jobs:
 
       - name: Tests (seed + generator + contract)
         run: npm test
+
+  # Deploy the committed site/ to Cloudflare Pages (radiprotocol.pages.dev) after a green main push.
+  # The job is skipped on PR branches (github.ref != main). Needs `check` so it only deploys an
+  # origin whose full pipeline (typecheck / regen-diff / wire-parity / test, incl. the plugin
+  # checkout at the pinned rev) already passed. The job activates once CLOUDFLARE_API_TOKEN is
+  # configured as a repo/org secret (see DEPLOY.md); until then it fails red on main (Risk r6).
+  deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout backend
+        uses: actions/checkout@v5
+
+      - name: Install
+        run: npm ci  # wrangler arrives via devDependencies (committed package-lock.json)
+
+      - name: Deploy to Cloudflare Pages (radiprotocol.pages.dev)
+        run: npm run deploy:pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

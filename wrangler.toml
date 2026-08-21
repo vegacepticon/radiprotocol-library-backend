@@ -1,0 +1,7 @@
+# Cloudflare Pages project configuration for the RadiProtocol community library.
+# This is the single committed source of truth for the deploy target: `npm run deploy:pages`
+# reads the project name + upload directory from here, so the command needs no CLI flags
+# and no out-of-repo state. The live project is https://radiprotocol.pages.dev.
+name = "radiprotocol"
+pages_build_output_dir = "site"
+compatibility_date = "2026-08-01"

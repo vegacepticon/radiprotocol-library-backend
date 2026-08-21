@@ -10,3 +10,6 @@ Thumbs.db
 
 # Editor
 *.log
+
+# Local Cloudflare wrangler state (created during authenticated local deploys)
+.wrangler/
