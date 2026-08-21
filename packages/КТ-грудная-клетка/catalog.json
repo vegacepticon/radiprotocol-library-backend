@@ -1,0 +1,18 @@
+{
+  "title": "КТ грудной клетки",
+  "description": "Протокол КТ грудной клетки (Cyrillic packageId round-trip).",
+  "categories": [
+    "radiology",
+    "chest"
+  ],
+  "author": {
+    "displayName": "Roman Shulgha"
+  },
+  "releases": [
+    {
+      "releaseVersion": "1.0.0",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "publishedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}

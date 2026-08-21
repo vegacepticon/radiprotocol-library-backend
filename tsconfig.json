@@ -16,7 +16,7 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "lib": ["DOM", "ES2022"],
-    "types": ["node"]
+    "types": ["node", "@cloudflare/workers-types"]
   },
-  "include": ["src/**/*.ts", "__tests__/**/*.ts"]
+  "include": ["src/**/*.ts", "__tests__/**/*.ts", "functions/**/*.ts"]
 }

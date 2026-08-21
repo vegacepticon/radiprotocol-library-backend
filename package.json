@@ -11,14 +11,16 @@
     "generate": "npm run build:generate && node dist/generate.cjs",
     "check:wire-parity": "node scripts/check-wire-parity.mjs",
     "check:regen-diff": "node scripts/check-regen-diff.mjs",
+    "check:packages": "node scripts/check-packages.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check": "npm run typecheck && npm run check:regen-diff && npm run check:wire-parity && npm test",
+    "check": "npm run typecheck && npm run check:packages && npm run check:regen-diff && npm run check:wire-parity && npm test",
     "deploy:pages": "wrangler pages deploy",
     "deploy": "npm run deploy:pages"
   },
   "license": "MIT",
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260821.1",
     "@types/node": "^22.0.0",
     "esbuild": "0.28.0",
     "typescript": "6.0.2",

@@ -1,6 +1,19 @@
 {
   "entries": [
     {
+      "packageId": "chest ct",
+      "title": "Chest CT (space id)",
+      "description": "A package whose id contains a space (exercises %20 encoding).",
+      "author": {
+        "displayName": "Roman Shulgha"
+      },
+      "latestVersion": "1.0.0",
+      "categories": [
+        "radiology"
+      ],
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
       "packageId": "chest-ct",
       "title": "Chest CT Protocol",
       "description": "A starter chest CT reporting protocol.",
@@ -25,19 +38,6 @@
       "categories": [
         "radiology",
         "chest"
-      ],
-      "updatedAt": "2026-01-01T00:00:00.000Z"
-    },
-    {
-      "packageId": "chest ct",
-      "title": "Chest CT (space id)",
-      "description": "A package whose id contains a space (exercises %20 encoding).",
-      "author": {
-        "displayName": "Roman Shulgha"
-      },
-      "latestVersion": "1.0.0",
-      "categories": [
-        "radiology"
       ],
       "updatedAt": "2026-01-01T00:00:00.000Z"
     }
