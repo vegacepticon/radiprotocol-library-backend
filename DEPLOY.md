@@ -2,9 +2,10 @@
 
 This backend serves the RadiProtocol Community Library catalogue as a **static site** on
 Cloudflare Pages (`https://radiprotocol.pages.dev`). All payloads under `site/` are
-**committed source-controlled artifacts** generated deterministically from `src/seed/seed.ts`
-by the generator (`npm run generate`). The `check:regen-diff` gate in CI enforces that the
-committed `site/` always equals generator output, so a deploy is always an upload of committed
+**committed source-controlled artifacts** generated deterministically from the
+`packages/` catalog (the content source of truth — see MODERATION.md) by the generator
+(`npm run generate`). The `check:regen-diff` gate in CI enforces that the committed
+`site/` always equals generator output, so a deploy is always an upload of committed
 bytes — never a build step.
 
 The deploy target is configured in `wrangler.toml` (`name = "radiprotocol"`,
@@ -22,28 +23,29 @@ The deploy target is configured in `wrangler.toml` (`name = "radiprotocol"`,
 
 ## Manual redeploy
 
-After editing `src/seed/seed.ts`:
+After editing the `packages/` catalog (see MODERATION.md for the layout):
 
 1. `npm run generate` — rebuilds `site/` deterministically (parse → re-emit preserves key order;
-   byte-exact with the trailing-`\n` hash dialect).
+   byte-exact with the trailing-`\n` hash dialect). `npm run check:packages` validates first.
 2. Commit the regenerated `site/` bytes (review the diff first; the committed `site/` is the
    deploy source of truth).
 3. `npm run deploy:pages` — uploads `site/` to the `radiprotocol` Pages project.
 
 Deploys are byte-deterministic — re-uploading the same committed `site/` produces an identical
 origin, so `https://radiprotocol.pages.dev/catalog` (application/json) does not change unless
-`seed.ts` actually changed.
+the `packages/` catalog actually changed.
 
 ## Automatic deploy (CI)
 
-A push to `main` runs `.github/workflows/ci.yml`: the `check` job (typecheck → regen-diff →
-wire-parity at the pinned plugin rev → test) must pass, then the `deploy` job uploads `site/` via
-`npm run deploy:pages` with `CLOUDFLARE_API_TOKEN`. PR branches only run `check` (the `deploy`
-job is guarded to `github.ref == 'refs/heads/main'`).
+A push to `main` runs `.github/workflows/ci.yml`: the `check` job (typecheck → check:packages →
+regen-diff → wire-parity at the pinned plugin rev → test) must pass, then the `publish` job
+regenerates `site/` from `packages/`, commits any changed bytes as `radiprotocol-bot`, pushes,
+and uploads `site/` via `npm run deploy:pages` with `CLOUDFLARE_API_TOKEN`. PR branches only run
+`check` (the `publish` job is guarded to `github.ref == 'refs/heads/main'`).
 
-> **Activation condition:** the `deploy` job fails red on `main` until `CLOUDFLARE_API_TOKEN` is
-> configured as a repo/org secret. This is accepted and documented by design — configure the
-> secret to turn the automatic deploy on.
+> **Activation condition:** the deploy step of `publish` fails red on `main` until
+> `CLOUDFLARE_API_TOKEN` is configured as a repo/org secret. This is accepted and documented by
+> design — configure the secret to turn the automatic deploy on.
 
 ## Rollback
 
