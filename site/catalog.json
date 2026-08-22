@@ -28,6 +28,19 @@
       "updatedAt": "2026-01-01T00:00:00.000Z"
     },
     {
+      "packageId": "gm",
+      "title": "ГМ",
+      "description": "simple dimple",
+      "author": {
+        "displayName": "Roman Shulgha"
+      },
+      "latestVersion": "1.0.0",
+      "categories": [
+        "test"
+      ],
+      "updatedAt": "2026-08-22T16:54:51.270Z"
+    },
+    {
       "packageId": "КТ-грудная-клетка",
       "title": "КТ грудной клетки",
       "description": "Протокол КТ грудной клетки (Cyrillic packageId round-trip).",

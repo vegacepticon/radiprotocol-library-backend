@@ -1,0 +1,1562 @@
+{
+  "manifest": {
+    "schema": "radiprotocol.package",
+    "version": 1,
+    "packageId": "gm",
+    "releaseVersion": "1.0.0",
+    "protocolDoc": {
+      "schema": "radiprotocol.protocol",
+      "version": 1,
+      "id": "protocol-1779103747728-1mgpmz",
+      "title": "ГМ",
+      "createdAt": "2026-05-18T11:29:07.728Z",
+      "updatedAt": "2026-08-21T14:11:25.351Z",
+      "nodes": [
+        {
+          "id": "node-1779448123302-yc52zl",
+          "kind": "start",
+          "x": -7668,
+          "y": -137,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(76, 175, 80, 0.28)",
+          "fields": {}
+        },
+        {
+          "id": "node-1780644913349-3qbjeq",
+          "kind": "question",
+          "x": -7316,
+          "y": -137,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Какая методика?",
+          "fields": {
+            "questionText": "Какая методика?"
+          }
+        },
+        {
+          "id": "node-1780645066738-x6m2qa",
+          "kind": "answer",
+          "x": -6964,
+          "y": -259,
+          "width": 200,
+          "height": 148,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "МСКТ-исследование выполнено по стандартной программе без контрастирования с последующей мультипланарной реконструкцией.",
+          "fields": {
+            "answerText": "МСКТ-исследование выполнено по стандартной программе без контрастирования с последующей мультипланарной реконструкцией.",
+            "displayLabel": "Без контраста"
+          }
+        },
+        {
+          "id": "node-1780645112366-kyavyu",
+          "kind": "answer",
+          "x": -6964,
+          "y": -15,
+          "width": 200,
+          "height": 148,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "МСКТ-исследование выполнено по стандартной программе с внутривенным контрастированием с последующей мультипланарной реконструкцией.",
+          "fields": {
+            "answerText": "МСКТ-исследование выполнено по стандартной программе с внутривенным контрастированием с последующей мультипланарной реконструкцией.",
+            "displayLabel": "Контраст"
+          }
+        },
+        {
+          "id": "node-1780645175328-igr55i",
+          "kind": "question",
+          "x": -6260,
+          "y": -137,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Срединные структуры смещены?",
+          "fields": {
+            "questionText": "Срединные структуры смещены?"
+          }
+        },
+        {
+          "id": "node-1780645211081-hx7hil",
+          "kind": "answer",
+          "x": -5908,
+          "y": -225,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Не смещены.",
+          "fields": {
+            "answerText": "Не смещены.",
+            "displayLabel": "Не смещены"
+          }
+        },
+        {
+          "id": "node-1780645380401-s0m0ow",
+          "kind": "snippet",
+          "x": -5908,
+          "y": -49,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Snippet",
+          "fields": {
+            "snippetPath": "Голова/Смещение срединных структур головного мозга.md"
+          }
+        },
+        {
+          "id": "node-1780645499463-7dvvya",
+          "kind": "question",
+          "x": -5204,
+          "y": -137,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Вещество мозга развито типично?",
+          "fields": {
+            "questionText": "Вещество мозга развито типично?"
+          }
+        },
+        {
+          "id": "node-1780645514251-8iuqus",
+          "kind": "answer",
+          "x": -4852,
+          "y": -225,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Белое и серое вещество больших полушарий развиты типично, обычной плотности.",
+          "fields": {
+            "answerText": "Белое и серое вещество больших полушарий развиты типично, обычной плотности.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780645521604-pg8nb2",
+          "kind": "answer",
+          "x": -4852,
+          "y": -48,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Нет, укажу что не так:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780645544346-q4pwvp",
+          "kind": "question",
+          "x": -4500,
+          "y": -137,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Мозолистое тело, зрительный бугор, ствол мозга и мозжечок нормальной плотности?",
+          "fields": {
+            "questionText": "Мозолистое тело, зрительный бугор, ствол мозга и мозжечок нормальной плотности?"
+          }
+        },
+        {
+          "id": "node-1780645554707-mf3nx8",
+          "kind": "answer",
+          "x": -4148,
+          "y": -225,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Мозолистое тело, зрительный бугор, ствол мозга и мозжечок нормальной плотности.",
+          "fields": {
+            "answerText": "Мозолистое тело, зрительный бугор, ствол мозга и мозжечок нормальной плотности.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780645562011-4dxvec",
+          "kind": "answer",
+          "x": -4148,
+          "y": -48,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Нет, укажу что не так:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780645606021-6fhgc4",
+          "kind": "question",
+          "x": -3796,
+          "y": -137,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Миндалины мозжечка не опущены?",
+          "fields": {
+            "questionText": "Миндалины мозжечка не опущены?"
+          }
+        },
+        {
+          "id": "node-1780645632152-fhms1w",
+          "kind": "answer",
+          "x": -3444,
+          "y": -225,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Миндалины мозжечка выше уровня линии Мак-Рея.",
+          "fields": {
+            "answerText": "Миндалины мозжечка выше уровня линии Мак-Рея.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1780645642941-hnnxjt",
+          "kind": "answer",
+          "x": -3444,
+          "y": -49,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу что не так с миндалинами:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780645729570-z4fqbk",
+          "kind": "answer",
+          "x": -2740,
+          "y": 216,
+          "width": 200,
+          "height": 114,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Очагов патологической плотности, объемных образований в веществе головного мозга и по ходу оболочек не выявлено.",
+          "fields": {
+            "answerText": "Очагов патологической плотности, объемных образований в веществе головного мозга и по ходу оболочек не выявлено.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1780645760637-e2ul7u",
+          "kind": "snippet",
+          "x": -2734,
+          "y": -258,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Выберу snippet",
+          "fields": {
+            "subfolderPath": "Голова",
+            "snippetLabel": "Выберу snippet"
+          }
+        },
+        {
+          "id": "node-1780645794012-bbn4cf",
+          "kind": "answer",
+          "x": -2773,
+          "y": -28,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "freeText": true,
+            "displayLabel": "Укажу, что:"
+          }
+        },
+        {
+          "id": "node-1780645972812-c9udj7",
+          "kind": "question",
+          "x": -2036,
+          "y": -137,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Субарахноидальное конвекситальное пространство и цистерны мозга не расширены?",
+          "fields": {
+            "questionText": "Субарахноидальное конвекситальное пространство и цистерны мозга не расширены?"
+          }
+        },
+        {
+          "id": "node-1780645979377-5f470b",
+          "kind": "answer",
+          "x": -2094,
+          "y": -364,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Субарахноидальное конвекситальное пространство и цистерны мозга не расширены.",
+          "fields": {
+            "answerText": "Субарахноидальное конвекситальное пространство и цистерны мозга не расширены.",
+            "displayLabel": "Не расширены",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1780645996219-wix0ib",
+          "kind": "snippet",
+          "x": -1684,
+          "y": -128,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Snippet",
+          "fields": {
+            "subfolderPath": "Голова"
+          }
+        },
+        {
+          "id": "node-1780646038022-cfgre6",
+          "kind": "answer",
+          "x": -1684,
+          "y": 48,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Субарахноидальное конвекситальное пространство и цистерны мозга расширены.",
+          "fields": {
+            "answerText": "Субарахноидальное конвекситальное пространство и цистерны мозга расширены.",
+            "displayLabel": "Расширены"
+          }
+        },
+        {
+          "id": "node-1780646731572-aecm3t",
+          "kind": "question",
+          "x": -1332,
+          "y": -40,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Желудочки обычной формы?",
+          "fields": {
+            "questionText": "Желудочки обычной формы?",
+            "startPointEnabled": true
+          }
+        },
+        {
+          "id": "node-1780646765972-dd6g15",
+          "kind": "answer",
+          "x": -980,
+          "y": -129,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Желудочки головного мозга обычной формы. ",
+          "fields": {
+            "answerText": "Желудочки головного мозга обычной формы. ",
+            "displayLabel": "Да",
+            "freeText": false,
+            "startPointEnabled": true
+          }
+        },
+        {
+          "id": "node-1780646773664-xcq086",
+          "kind": "answer",
+          "x": -986,
+          "y": 40,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу что не так с желудочками:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780646789891-96o7vz",
+          "kind": "question",
+          "x": -628,
+          "y": -40,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Боковые желудочки симметричны? Не расширены?",
+          "fields": {
+            "questionText": "Боковые желудочки симметричны? Не расширены?"
+          }
+        },
+        {
+          "id": "node-1780646819590-so2b0k",
+          "kind": "answer",
+          "x": -283,
+          "y": -147,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Боковые желудочки симметричны, не расширены. ",
+          "fields": {
+            "answerText": "Боковые желудочки симметричны, не расширены. ",
+            "displayLabel": "Не расширены",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1780646837328-1jlxiz",
+          "kind": "snippet",
+          "x": -293,
+          "y": 263,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Расширены+деформированы, подробное описание",
+          "fields": {
+            "snippetPath": "Голова/Желудочки расширены или деформированы.md",
+            "snippetLabel": "Расширены+деформированы, подробное описание"
+          }
+        },
+        {
+          "id": "node-1780646931306-a5x4ll",
+          "kind": "snippet",
+          "x": 107,
+          "y": -306,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Snippet",
+          "fields": {
+            "snippetPath": "Голова/Ширина 3-го желудочка.md"
+          }
+        },
+        {
+          "id": "node-1780646969863-0qqobe",
+          "kind": "question",
+          "x": 780,
+          "y": -40,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Турецкое седло в норме?",
+          "fields": {
+            "questionText": "Турецкое седло в норме?"
+          }
+        },
+        {
+          "id": "node-1780647026951-ys3jl5",
+          "kind": "answer",
+          "x": 1132,
+          "y": -179,
+          "width": 200,
+          "height": 148,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Турецкое седло обычной формы и величины. \nРазмеры, плотность и структура гипофиза в норме.\nПараселлярные структуры обычной плотности и локализации.",
+          "fields": {
+            "answerText": "Турецкое седло обычной формы и величины. \nРазмеры, плотность и структура гипофиза в норме.\nПараселлярные структуры обычной плотности и локализации.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780647050219-hc4vuq",
+          "kind": "answer",
+          "x": 1114,
+          "y": 31,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу что не так с турецким седлом:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780647100421-36887f",
+          "kind": "question",
+          "x": 1782,
+          "y": -69,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть нарушение развития или пневматизации околоносовых пазух?",
+          "fields": {
+            "questionText": "Есть нарушение развития или пневматизации околоносовых пазух?",
+            "loop": true
+          }
+        },
+        {
+          "id": "node-1780647119716-w1pxfe",
+          "kind": "answer",
+          "x": 2188,
+          "y": -132,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Без нарушения развития и пневматизации.",
+          "fields": {
+            "answerText": "Без нарушения развития и пневматизации.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1780647127309-9arcb5",
+          "kind": "answer",
+          "x": 2209,
+          "y": 85,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Да, укажу изменения:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780647170366-qdmict",
+          "kind": "question",
+          "x": 2858,
+          "y": -22,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть нарушения со стороны орбит?",
+          "fields": {
+            "questionText": "Есть нарушения со стороны орбит?"
+          }
+        },
+        {
+          "id": "node-1780647193238-0x913g",
+          "kind": "answer",
+          "x": 3244,
+          "y": -153,
+          "width": 200,
+          "height": 114,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Расположены симметрично, нормальных размеров с обычным развитием орбитальных конусов. Стенки орбит не изменены.",
+          "fields": {
+            "answerText": "Расположены симметрично, нормальных размеров с обычным развитием орбитальных конусов. Стенки орбит не изменены.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1780647203620-hmj1m6",
+          "kind": "answer",
+          "x": 3239,
+          "y": 37,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу что не так с орбитами:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780647238995-jaa07h",
+          "kind": "question",
+          "x": 3918,
+          "y": -43,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Краниовертебральный переход без особенностей?",
+          "fields": {
+            "questionText": "Краниовертебральный переход без особенностей?"
+          }
+        },
+        {
+          "id": "node-1780647254573-sjmhld",
+          "kind": "answer",
+          "x": 4300,
+          "y": -128,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Краниовертебральный переход без особенностей.",
+          "fields": {
+            "answerText": "Краниовертебральный переход без особенностей.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780647260114-18yvmj",
+          "kind": "answer",
+          "x": 4298,
+          "y": 54,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу что не так с краниовертебральным переходом:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780647307350-3zkkkn",
+          "kind": "question",
+          "x": 4652,
+          "y": -40,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Сосцевидные отростки и пирамиды височных костей пневматизированы?",
+          "fields": {
+            "questionText": "Сосцевидные отростки и пирамиды височных костей пневматизированы?"
+          }
+        },
+        {
+          "id": "node-1780647325875-ha2wxh",
+          "kind": "answer",
+          "x": 5004,
+          "y": -133,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Сосцевидные отростки и пирамиды височных костей пневматизированы.",
+          "fields": {
+            "answerText": "Сосцевидные отростки и пирамиды височных костей пневматизированы.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780647332139-z2fwyd",
+          "kind": "answer",
+          "x": 5015,
+          "y": 94,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу что не так с пневматизацией:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780647360961-jvjvjt",
+          "kind": "question",
+          "x": 5356,
+          "y": -40,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Кости свода и основания черепа без деструктивных, травматических изменений?",
+          "fields": {
+            "questionText": "Кости свода и основания черепа без деструктивных, травматических изменений?"
+          }
+        },
+        {
+          "id": "node-1780647369010-kjk6wo",
+          "kind": "answer",
+          "x": 5708,
+          "y": -129,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Кости свода и основания черепа без деструктивных, травматических изменений.",
+          "fields": {
+            "answerText": "Кости свода и основания черепа без деструктивных, травматических изменений.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780647375667-vlwxar",
+          "kind": "answer",
+          "x": 5708,
+          "y": 48,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу что не так с костями:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1780647431791-q8z5in",
+          "kind": "answer",
+          "x": 7116,
+          "y": -392,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Нет",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1780647541961-8ijwza",
+          "kind": "question",
+          "x": 6060,
+          "y": -40,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть изменения на сканированных уровнях?",
+          "fields": {
+            "questionText": "Есть изменения на сканированных уровнях?"
+          }
+        },
+        {
+          "id": "node-1780647558518-wqfcoe",
+          "kind": "answer",
+          "x": 6412,
+          "y": 48,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nНА СКАНИРОВАННЫХ УРОВНЯХ:",
+          "fields": {
+            "answerText": "\nНА СКАНИРОВАННЫХ УРОВНЯХ:",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780647591239-4yck4t",
+          "kind": "snippet",
+          "x": 7116,
+          "y": -216,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Со стороны шеи",
+          "fields": {
+            "subfolderPath": "Шея",
+            "snippetLabel": "Со стороны шеи"
+          }
+        },
+        {
+          "id": "node-1780647612372-ylmhd6",
+          "kind": "snippet",
+          "x": 7116,
+          "y": -40,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "На уровне головы",
+          "fields": {
+            "subfolderPath": "Голова",
+            "snippetLabel": "На уровне головы"
+          }
+        },
+        {
+          "id": "node-1780647625875-djs1ah",
+          "kind": "answer",
+          "x": 7152,
+          "y": 176,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу какие есть еще изменения:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1787315164078-03xrtd",
+          "kind": "answer",
+          "x": -6556,
+          "y": -127,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nСРЕДИННЫЕ СТРУКТУРЫ:",
+          "fields": {
+            "answerText": "\nСРЕДИННЫЕ СТРУКТУРЫ:",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1787315238123-5wir4v",
+          "kind": "answer",
+          "x": -5526,
+          "y": -132,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nВЕЩЕСТВО ГОЛОВНОГО МОЗГА:",
+          "fields": {
+            "answerText": "\nВЕЩЕСТВО ГОЛОВНОГО МОЗГА:",
+            "freeText": false,
+            "startPointEnabled": true,
+            "startPointLabel": "Вещество"
+          }
+        },
+        {
+          "id": "node-1787315510105-wboptn",
+          "kind": "answer",
+          "x": -2419,
+          "y": -120,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nЛИКВОРОСОДЕРЖАЩИЕ ПРОСТРАНСТВА:",
+          "fields": {
+            "answerText": "\nЛИКВОРОСОДЕРЖАЩИЕ ПРОСТРАНСТВА:",
+            "freeText": false,
+            "displayLabel": "Все указано, продолжаем.",
+            "startPointEnabled": true
+          }
+        },
+        {
+          "id": "node-1787315733166-xli38m",
+          "kind": "answer",
+          "x": -234,
+          "y": 16,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Боковые желудочки симметричны, расширены.",
+          "fields": {
+            "answerText": "Боковые желудочки симметричны, расширены.",
+            "freeText": false,
+            "displayLabel": "Расширены - короткое описание"
+          }
+        },
+        {
+          "id": "node-1787315768547-ys3ss4",
+          "kind": "answer",
+          "x": 404,
+          "y": -74,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nСЕЛЛЯРНАЯ ОБЛАСТЬ:",
+          "fields": {
+            "answerText": "\nСЕЛЛЯРНАЯ ОБЛАСТЬ:",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1787315790534-qlzxsx",
+          "kind": "answer",
+          "x": 1474,
+          "y": -46,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nОКОЛОНОСОВЫЕ ПАЗУХИ:",
+          "fields": {
+            "answerText": "\nОКОЛОНОСОВЫЕ ПАЗУХИ:",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1787315807471-wpfg0d",
+          "kind": "answer",
+          "x": 2548,
+          "y": -7,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nОРБИТЫ:",
+          "fields": {
+            "answerText": "\nОРБИТЫ:",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1787315822555-1ypau7",
+          "kind": "answer",
+          "x": 3630,
+          "y": -31,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\nКОСТНЫЕ СТРУКТУРЫ:",
+          "fields": {
+            "answerText": "\nКОСТНЫЕ СТРУКТУРЫ:",
+            "freeText": false
+          }
+        },
+        {
+          "id": "node-1787315864819-lfi5qf",
+          "kind": "snippet",
+          "x": 3243,
+          "y": 229,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Деформация медиальной стенки",
+          "fields": {
+            "snippetPath": "Голова/Деформация медиальной стенки глазницы.md",
+            "snippetLabel": "Деформация медиальной стенки"
+          }
+        },
+        {
+          "id": "node-1787316028540-w4e5b1",
+          "kind": "answer",
+          "x": 7713,
+          "y": -21,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "\n\n\nЗаключение:\nПризнаков патологических изменений в веществе головного мозга не выявлено.\n\nРекомендовано:\nКонсультация направившего специалиста.",
+          "fields": {
+            "answerText": "\n\n\nЗаключение:\nПризнаков патологических изменений в веществе головного мозга не выявлено.\n\nРекомендовано:\nКонсультация направившего специалиста.",
+            "freeText": false,
+            "displayLabel": "Все указано, продолжаем"
+          }
+        },
+        {
+          "id": "node-1787316141843-264gft",
+          "kind": "snippet",
+          "x": 2143,
+          "y": 284,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Утолщение слизистой",
+          "fields": {
+            "snippetPath": "Голова/Утолщение слизистой.md",
+            "snippetLabel": "Утолщение слизистой"
+          }
+        },
+        {
+          "id": "node-1787316542616-yyaqzg",
+          "kind": "question",
+          "x": -3110,
+          "y": -137,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть ли очаги патологической плотности, объемные образования в веществе головного мозга и по ходу его оболочек?",
+          "fields": {
+            "questionText": "Есть ли очаги патологической плотности, объемные образования в веществе головного мозга и по ходу его оболочек?",
+            "loop": true,
+            "optionOrder": [
+              "edge-1787316563557-8ytrux",
+              "edge-1787316559740-xb4h7j",
+              "edge-1787316557869-1ui0w8",
+              "edge-1787316550889-y4thw6"
+            ]
+          }
+        },
+        {
+          "id": "node-1787316659819-82albb",
+          "kind": "question",
+          "x": 6716,
+          "y": 62,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Какие изменения есть?",
+          "fields": {
+            "questionText": "Какие изменения есть?",
+            "loop": true,
+            "optionOrder": [
+              "edge-1787316672121-lqnpud",
+              "edge-1787316665222-v2gkfd",
+              "edge-1787316667529-ax1vac",
+              "edge-1787316675108-lhr9vw"
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-1780644913352-gczigc",
+          "fromNodeId": "node-1779448123302-yc52zl",
+          "toNodeId": "node-1780644913349-3qbjeq"
+        },
+        {
+          "id": "edge-1780645066740-4gwapd",
+          "fromNodeId": "node-1780644913349-3qbjeq",
+          "toNodeId": "node-1780645066738-x6m2qa",
+          "label": "Без контраста"
+        },
+        {
+          "id": "edge-1780645112368-33n7jp",
+          "fromNodeId": "node-1780644913349-3qbjeq",
+          "toNodeId": "node-1780645112366-kyavyu",
+          "label": "Контраст"
+        },
+        {
+          "id": "edge-1780645211085-noxvc2",
+          "fromNodeId": "node-1780645175328-igr55i",
+          "toNodeId": "node-1780645211081-hx7hil",
+          "label": "Не смещены"
+        },
+        {
+          "id": "edge-1780645380404-72kq65",
+          "fromNodeId": "node-1780645175328-igr55i",
+          "toNodeId": "node-1780645380401-s0m0ow",
+          "label": "Snippet"
+        },
+        {
+          "id": "edge-1780645514254-le4cl7",
+          "fromNodeId": "node-1780645499463-7dvvya",
+          "toNodeId": "node-1780645514251-8iuqus",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780645521607-yzg7c8",
+          "fromNodeId": "node-1780645499463-7dvvya",
+          "toNodeId": "node-1780645521604-pg8nb2",
+          "label": "Нет, укажу что не так:"
+        },
+        {
+          "id": "edge-1780645544348-t3dehf",
+          "fromNodeId": "node-1780645514251-8iuqus",
+          "toNodeId": "node-1780645544346-q4pwvp"
+        },
+        {
+          "id": "edge-1780645551874-lpyie9",
+          "fromNodeId": "node-1780645521604-pg8nb2",
+          "toNodeId": "node-1780645544346-q4pwvp"
+        },
+        {
+          "id": "edge-1780645554710-lfhfsp",
+          "fromNodeId": "node-1780645544346-q4pwvp",
+          "toNodeId": "node-1780645554707-mf3nx8",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780645562014-x1crzz",
+          "fromNodeId": "node-1780645544346-q4pwvp",
+          "toNodeId": "node-1780645562011-4dxvec",
+          "label": "Нет, укажу что не так:"
+        },
+        {
+          "id": "edge-1780645606024-y9d4hh",
+          "fromNodeId": "node-1780645554707-mf3nx8",
+          "toNodeId": "node-1780645606021-6fhgc4"
+        },
+        {
+          "id": "edge-1780645625241-560bw2",
+          "fromNodeId": "node-1780645562011-4dxvec",
+          "toNodeId": "node-1780645606021-6fhgc4"
+        },
+        {
+          "id": "edge-1780645632155-ydh288",
+          "fromNodeId": "node-1780645606021-6fhgc4",
+          "toNodeId": "node-1780645632152-fhms1w",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1780645642944-zjmrrl",
+          "fromNodeId": "node-1780645606021-6fhgc4",
+          "toNodeId": "node-1780645642941-hnnxjt",
+          "label": "Укажу что не так с миндалинами:"
+        },
+        {
+          "id": "edge-1780645979379-hch81x",
+          "fromNodeId": "node-1780645972812-c9udj7",
+          "toNodeId": "node-1780645979377-5f470b",
+          "label": "Не расширены"
+        },
+        {
+          "id": "edge-1780645996221-5apwbp",
+          "fromNodeId": "node-1780645972812-c9udj7",
+          "toNodeId": "node-1780645996219-wix0ib",
+          "label": "Snippet"
+        },
+        {
+          "id": "edge-1780646038024-lgqlih",
+          "fromNodeId": "node-1780645972812-c9udj7",
+          "toNodeId": "node-1780646038022-cfgre6",
+          "label": "Расширены"
+        },
+        {
+          "id": "edge-1780646731573-3jgy31",
+          "fromNodeId": "node-1780645979377-5f470b",
+          "toNodeId": "node-1780646731572-aecm3t"
+        },
+        {
+          "id": "edge-1780646742776-pt19z7",
+          "fromNodeId": "node-1780645996219-wix0ib",
+          "toNodeId": "node-1780646731572-aecm3t"
+        },
+        {
+          "id": "edge-1780646744856-70jxw1",
+          "fromNodeId": "node-1780646038022-cfgre6",
+          "toNodeId": "node-1780646731572-aecm3t"
+        },
+        {
+          "id": "edge-1780646765975-t2utkq",
+          "fromNodeId": "node-1780646731572-aecm3t",
+          "toNodeId": "node-1780646765972-dd6g15",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780646773667-02ztel",
+          "fromNodeId": "node-1780646731572-aecm3t",
+          "toNodeId": "node-1780646773664-xcq086",
+          "label": "Укажу что не так с желудочками:"
+        },
+        {
+          "id": "edge-1780646789894-0i1rfn",
+          "fromNodeId": "node-1780646765972-dd6g15",
+          "toNodeId": "node-1780646789891-96o7vz"
+        },
+        {
+          "id": "edge-1780646814238-ozbgck",
+          "fromNodeId": "node-1780646773664-xcq086",
+          "toNodeId": "node-1780646789891-96o7vz"
+        },
+        {
+          "id": "edge-1780646819593-ychr04",
+          "fromNodeId": "node-1780646789891-96o7vz",
+          "toNodeId": "node-1780646819590-so2b0k",
+          "label": "Не расширены"
+        },
+        {
+          "id": "edge-1780646837330-v64g2f",
+          "fromNodeId": "node-1780646789891-96o7vz",
+          "toNodeId": "node-1780646837328-1jlxiz",
+          "label": "Расширены+деформированы, подробное описание"
+        },
+        {
+          "id": "edge-1780646931308-jt9yem",
+          "fromNodeId": "node-1780646819590-so2b0k",
+          "toNodeId": "node-1780646931306-a5x4ll",
+          "label": "Snippet"
+        },
+        {
+          "id": "edge-1780647026954-1nm2ky",
+          "fromNodeId": "node-1780646969863-0qqobe",
+          "toNodeId": "node-1780647026951-ys3jl5",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780647050222-7sgco4",
+          "fromNodeId": "node-1780646969863-0qqobe",
+          "toNodeId": "node-1780647050219-hc4vuq",
+          "label": "Укажу что не так с турецким седлом:"
+        },
+        {
+          "id": "edge-1780647119719-aaeijg",
+          "fromNodeId": "node-1780647100421-36887f",
+          "toNodeId": "node-1780647119716-w1pxfe",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1780647127312-rdlk19",
+          "fromNodeId": "node-1780647100421-36887f",
+          "toNodeId": "node-1780647127309-9arcb5",
+          "label": "Да, укажу изменения:"
+        },
+        {
+          "id": "edge-1780647193240-y6k5ps",
+          "fromNodeId": "node-1780647170366-qdmict",
+          "toNodeId": "node-1780647193238-0x913g",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1780647203623-ostubl",
+          "fromNodeId": "node-1780647170366-qdmict",
+          "toNodeId": "node-1780647203620-hmj1m6",
+          "label": "Укажу что не так с орбитами:"
+        },
+        {
+          "id": "edge-1780647254576-q5rnjp",
+          "fromNodeId": "node-1780647238995-jaa07h",
+          "toNodeId": "node-1780647254573-sjmhld",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780647260117-lobh8u",
+          "fromNodeId": "node-1780647238995-jaa07h",
+          "toNodeId": "node-1780647260114-18yvmj",
+          "label": "Укажу что не так с краниовертебральным переходом:"
+        },
+        {
+          "id": "edge-1780647307352-nw4mpm",
+          "fromNodeId": "node-1780647254573-sjmhld",
+          "toNodeId": "node-1780647307350-3zkkkn"
+        },
+        {
+          "id": "edge-1780647324029-rwd87a",
+          "fromNodeId": "node-1780647260114-18yvmj",
+          "toNodeId": "node-1780647307350-3zkkkn"
+        },
+        {
+          "id": "edge-1780647325878-jgv1ww",
+          "fromNodeId": "node-1780647307350-3zkkkn",
+          "toNodeId": "node-1780647325875-ha2wxh",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780647332142-v6x9y3",
+          "fromNodeId": "node-1780647307350-3zkkkn",
+          "toNodeId": "node-1780647332139-z2fwyd",
+          "label": "Укажу что не так с пневматизацией:"
+        },
+        {
+          "id": "edge-1780647360965-rgx0jl",
+          "fromNodeId": "node-1780647325875-ha2wxh",
+          "toNodeId": "node-1780647360961-jvjvjt"
+        },
+        {
+          "id": "edge-1780647366344-1ogef9",
+          "fromNodeId": "node-1780647332139-z2fwyd",
+          "toNodeId": "node-1780647360961-jvjvjt"
+        },
+        {
+          "id": "edge-1780647369013-kckjmk",
+          "fromNodeId": "node-1780647360961-jvjvjt",
+          "toNodeId": "node-1780647369010-kjk6wo",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780647375670-25io0d",
+          "fromNodeId": "node-1780647360961-jvjvjt",
+          "toNodeId": "node-1780647375667-vlwxar",
+          "label": "Укажу что не так с костями:"
+        },
+        {
+          "id": "edge-1780647541964-8iviqe",
+          "fromNodeId": "node-1780647369010-kjk6wo",
+          "toNodeId": "node-1780647541961-8ijwza"
+        },
+        {
+          "id": "edge-1780647551192-47fcyu",
+          "fromNodeId": "node-1780647375667-vlwxar",
+          "toNodeId": "node-1780647541961-8ijwza"
+        },
+        {
+          "id": "edge-1780647555321-9kqvsz",
+          "fromNodeId": "node-1780647541961-8ijwza",
+          "toNodeId": "node-1780647431791-q8z5in",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1780647558521-dm6a27",
+          "fromNodeId": "node-1780647541961-8ijwza",
+          "toNodeId": "node-1780647558518-wqfcoe",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1787315164080-loc4m8",
+          "fromNodeId": "node-1780645066738-x6m2qa",
+          "toNodeId": "node-1787315164078-03xrtd",
+          "label": "СРЕДИННЫЕ СТРУКТУРЫ:"
+        },
+        {
+          "id": "edge-1787315182215-38jt9x",
+          "fromNodeId": "node-1780645112366-kyavyu",
+          "toNodeId": "node-1787315164078-03xrtd",
+          "label": "СРЕДИННЫЕ СТРУКТУРЫ:"
+        },
+        {
+          "id": "edge-1787315184091-8vnoe3",
+          "fromNodeId": "node-1787315164078-03xrtd",
+          "toNodeId": "node-1780645175328-igr55i"
+        },
+        {
+          "id": "edge-1787315238126-w28o8f",
+          "fromNodeId": "node-1780645211081-hx7hil",
+          "toNodeId": "node-1787315238123-5wir4v",
+          "label": "ВЕЩЕСТВО ГОЛОВНОГО МОЗГА:"
+        },
+        {
+          "id": "edge-1787315256086-h08w6i",
+          "fromNodeId": "node-1780645380401-s0m0ow",
+          "toNodeId": "node-1787315238123-5wir4v",
+          "label": "ВЕЩЕСТВО ГОЛОВНОГО МОЗГА:"
+        },
+        {
+          "id": "edge-1787315257747-qk1tlj",
+          "fromNodeId": "node-1787315238123-5wir4v",
+          "toNodeId": "node-1780645499463-7dvvya"
+        },
+        {
+          "id": "edge-1787315547016-2msa8m",
+          "fromNodeId": "node-1787315510105-wboptn",
+          "toNodeId": "node-1780645972812-c9udj7"
+        },
+        {
+          "id": "edge-1787315565336-024ntu",
+          "fromNodeId": "node-1780645729570-z4fqbk",
+          "toNodeId": "node-1787315510105-wboptn",
+          "label": "Все указано, продолжаем."
+        },
+        {
+          "id": "edge-1787315733169-axxtb4",
+          "fromNodeId": "node-1780646789891-96o7vz",
+          "toNodeId": "node-1787315733166-xli38m",
+          "label": "Расширены - короткое описание"
+        },
+        {
+          "id": "edge-1787315752676-1wpqz9",
+          "fromNodeId": "node-1787315733166-xli38m",
+          "toNodeId": "node-1780646931306-a5x4ll",
+          "label": "Snippet"
+        },
+        {
+          "id": "edge-1787315768550-djhzig",
+          "fromNodeId": "node-1780646837328-1jlxiz",
+          "toNodeId": "node-1787315768547-ys3ss4",
+          "label": "СЕЛЛЯРНАЯ ОБЛАСТЬ:"
+        },
+        {
+          "id": "edge-1787315776093-zi3h43",
+          "fromNodeId": "node-1780646931306-a5x4ll",
+          "toNodeId": "node-1787315768547-ys3ss4",
+          "label": "СЕЛЛЯРНАЯ ОБЛАСТЬ:"
+        },
+        {
+          "id": "edge-1787315780065-3g332z",
+          "fromNodeId": "node-1787315768547-ys3ss4",
+          "toNodeId": "node-1780646969863-0qqobe"
+        },
+        {
+          "id": "edge-1787315790538-n2nas5",
+          "fromNodeId": "node-1780647026951-ys3jl5",
+          "toNodeId": "node-1787315790534-qlzxsx",
+          "label": "ОКОЛОНОСОВЫЕ ПАЗУХИ:"
+        },
+        {
+          "id": "edge-1787315794448-l2xza2",
+          "fromNodeId": "node-1780647050219-hc4vuq",
+          "toNodeId": "node-1787315790534-qlzxsx",
+          "label": "ОКОЛОНОСОВЫЕ ПАЗУХИ:"
+        },
+        {
+          "id": "edge-1787315798645-ufjfri",
+          "fromNodeId": "node-1787315790534-qlzxsx",
+          "toNodeId": "node-1780647100421-36887f"
+        },
+        {
+          "id": "edge-1787315807477-fidp9w",
+          "fromNodeId": "node-1780647119716-w1pxfe",
+          "toNodeId": "node-1787315807471-wpfg0d",
+          "label": "ОРБИТЫ:"
+        },
+        {
+          "id": "edge-1787315812993-0j8aq7",
+          "fromNodeId": "node-1787315807471-wpfg0d",
+          "toNodeId": "node-1780647170366-qdmict"
+        },
+        {
+          "id": "edge-1787315822559-8fqgmb",
+          "fromNodeId": "node-1780647193238-0x913g",
+          "toNodeId": "node-1787315822555-1ypau7",
+          "label": "КОСТНЫЕ СТРУКТУРЫ:"
+        },
+        {
+          "id": "edge-1787315831163-1446oe",
+          "fromNodeId": "node-1780647203620-hmj1m6",
+          "toNodeId": "node-1787315822555-1ypau7",
+          "label": "КОСТНЫЕ СТРУКТУРЫ:"
+        },
+        {
+          "id": "edge-1787315833414-lntitc",
+          "fromNodeId": "node-1787315822555-1ypau7",
+          "toNodeId": "node-1780647238995-jaa07h"
+        },
+        {
+          "id": "edge-1787315864822-cqqb0b",
+          "fromNodeId": "node-1780647170366-qdmict",
+          "toNodeId": "node-1787315864819-lfi5qf",
+          "label": "Деформация медиальной стенки"
+        },
+        {
+          "id": "edge-1787315895432-dpb87r",
+          "fromNodeId": "node-1787315864819-lfi5qf",
+          "toNodeId": "node-1787315822555-1ypau7",
+          "label": "КОСТНЫЕ СТРУКТУРЫ:"
+        },
+        {
+          "id": "edge-1787316028544-3pktdo",
+          "fromNodeId": "node-1780647431791-q8z5in",
+          "toNodeId": "node-1787316028540-w4e5b1",
+          "label": "Все указано, продолжаем"
+        },
+        {
+          "id": "edge-1787316141846-qn5url",
+          "fromNodeId": "node-1780647100421-36887f",
+          "toNodeId": "node-1787316141843-264gft",
+          "label": "Утолщение слизистой"
+        },
+        {
+          "id": "edge-1787316326473-nbin5y",
+          "fromNodeId": "node-1780647100421-36887f",
+          "toNodeId": "node-1787315807471-wpfg0d",
+          "label": "Все указано, продолжаем",
+          "isLoopExit": true
+        },
+        {
+          "id": "edge-1787316542617-118koo",
+          "fromNodeId": "node-1780645632152-fhms1w",
+          "toNodeId": "node-1787316542616-yyaqzg"
+        },
+        {
+          "id": "edge-1787316547479-jyn3qx",
+          "fromNodeId": "node-1780645642941-hnnxjt",
+          "toNodeId": "node-1787316542616-yyaqzg"
+        },
+        {
+          "id": "edge-1787316550889-y4thw6",
+          "fromNodeId": "node-1787316542616-yyaqzg",
+          "toNodeId": "node-1787315510105-wboptn",
+          "label": "Все указано, продолжаем.",
+          "isLoopExit": true
+        },
+        {
+          "id": "edge-1787316557869-1ui0w8",
+          "fromNodeId": "node-1787316542616-yyaqzg",
+          "toNodeId": "node-1780645760637-e2ul7u",
+          "label": "Выберу snippet"
+        },
+        {
+          "id": "edge-1787316559740-xb4h7j",
+          "fromNodeId": "node-1787316542616-yyaqzg",
+          "toNodeId": "node-1780645794012-bbn4cf",
+          "label": "Укажу, что:"
+        },
+        {
+          "id": "edge-1787316563557-8ytrux",
+          "fromNodeId": "node-1787316542616-yyaqzg",
+          "toNodeId": "node-1780645729570-z4fqbk",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1787316659822-brk4sm",
+          "fromNodeId": "node-1780647558518-wqfcoe",
+          "toNodeId": "node-1787316659819-82albb"
+        },
+        {
+          "id": "edge-1787316665222-v2gkfd",
+          "fromNodeId": "node-1787316659819-82albb",
+          "toNodeId": "node-1780647591239-4yck4t",
+          "label": "Со стороны шеи"
+        },
+        {
+          "id": "edge-1787316667529-ax1vac",
+          "fromNodeId": "node-1787316659819-82albb",
+          "toNodeId": "node-1780647612372-ylmhd6",
+          "label": "На уровне головы"
+        },
+        {
+          "id": "edge-1787316672121-lqnpud",
+          "fromNodeId": "node-1787316659819-82albb",
+          "toNodeId": "node-1780647625875-djs1ah",
+          "label": "Укажу какие есть еще изменения:"
+        },
+        {
+          "id": "edge-1787316675108-lhr9vw",
+          "fromNodeId": "node-1787316659819-82albb",
+          "toNodeId": "node-1787316028540-w4e5b1",
+          "label": "Все указано, продолжаем",
+          "isLoopExit": true
+        }
+      ],
+      "viewport": {
+        "x": -4152,
+        "y": -334,
+        "zoom": 0.7
+      },
+      "layoutDirection": "LR"
+    },
+    "protocolSha256": "f1f36aa245006de7d48387d7da0896104645321a412b15f0cfc4d8e2d6b5639d",
+    "snippetFiles": [
+      {
+        "relPath": "Голова/Смещение срединных структур головного мозга.md",
+        "sha256": "ec99208fa852242e0f6e404051af7bb7e92bf0314356698e652b34b148478fb6"
+      },
+      {
+        "relPath": "Голова/Атеросклероз внутренних сонных и позвоночных артерий.md",
+        "sha256": "ccc6cd2fd136e74fdfbf88b4639c6a2f0f6e8951978985560c062808c37758ac"
+      },
+      {
+        "relPath": "Голова/Без патологических изменений в веществе мозга.md",
+        "sha256": "e161489cf1b2ef1cea7942aa571fe0e744788a778d49cd0f45bc4c2f00831c39"
+      },
+      {
+        "relPath": "Голова/Вариант заключения для дегенеративно-дистрофических изменений головного мозга.md",
+        "sha256": "31f48abbb04b7ebd878a1b824c65e84150a32429f0397dfe5053649315107567"
+      },
+      {
+        "relPath": "Голова/Деформация медиальной стенки глазницы.md",
+        "sha256": "cfbc6e0e0d624d00b6c19f82b4c2245548dc4f8cd7d6be5ef0419e80706269a4"
+      },
+      {
+        "relPath": "Голова/Желудочки расширены или деформированы.md",
+        "sha256": "d352de19fe91fdfa13e79a785ff6ec4460d506335b3827e478b33ab745becf42"
+      },
+      {
+        "relPath": "Голова/Кистозно-атрофические изменения.md",
+        "sha256": "3018b5e727779780d734cb32a1293a0203ac1534e62e1860f4d7ed9a0190ef44"
+      },
+      {
+        "relPath": "Голова/Лакунарные кисты или расширенные периваскулярные пространства Вирхова-Робина.md",
+        "sha256": "0a9ca83f94f743aced7e55424876b4823ee54151ab56575f8b149d76e8fe10ec"
+      },
+      {
+        "relPath": "Голова/Лейкоареоз.md",
+        "sha256": "f9c35615fce0051429a6c725371435d1810185138a4e9845d5a7392fb2dbb942"
+      },
+      {
+        "relPath": "Голова/Норма на травму в заключение.md",
+        "sha256": "d906de8ce09d9b781dfa802907610f57d803f73c8b9a023427956bb562553895"
+      },
+      {
+        "relPath": "Голова/Нормальные размеры желудочков.md",
+        "sha256": "3a4b58f8b48a3ffcea6af40ae70c010519b333231c0cb3282d5af999aa0272e0"
+      },
+      {
+        "relPath": "Голова/Обызвествления в проекции базальных ядер физиологического характера.md",
+        "sha256": "e16b7a2c3d406e783d642fb6f9bd34e2e72d1f06a49ec7e5c7fbd2829c7319b2"
+      },
+      {
+        "relPath": "Голова/Расширение конвекситальных борозд и ликворных пространств.md",
+        "sha256": "ce5ebcc2113c81e4a35a36344810a942207644adca5fefc16997c414e7284a70"
+      },
+      {
+        "relPath": "Голова/Ретроцеребеллярная киста.md",
+        "sha256": "bfd45c1291b47b9147ca8213b29f9495175ae30b214d4064218ab25071989270"
+      },
+      {
+        "relPath": "Голова/Серные пробки.md",
+        "sha256": "05259d9df2ae1ce41499f01b409b921ee8284b0d9789c1c765855afbe93dde73"
+      },
+      {
+        "relPath": "Голова/Субдуральное кровоизлияние.md",
+        "sha256": "c352d25acb6bfd0e5ae2181052abd44a0185612db3c456d13eb25870f7e4434b"
+      },
+      {
+        "relPath": "Голова/Трепанационный дефект.md",
+        "sha256": "1ad04e32feac3b3956a2b4840258db739ab568acdc2e3712734169eb14ecc68a"
+      },
+      {
+        "relPath": "Голова/Утолщение слизистой.md",
+        "sha256": "05bfadf06cabdf3b81ea68ebe4098d3e35e2aaae444535543eb86d65abc643ae"
+      },
+      {
+        "relPath": "Голова/Фтизис глазного яблока.md",
+        "sha256": "2a1a39d7ea647f2b7f4271a64d6fdb1fc91fdc949c19f3d0ee54277ece049871"
+      },
+      {
+        "relPath": "Голова/Ширина 3-го желудочка.md",
+        "sha256": "95b3e14ca1d83cc9b01c3ad40a0256ed6eea505ea03445302ca35a8ff3958e13"
+      },
+      {
+        "relPath": "Шея/test.md",
+        "sha256": "11d83d3f5343c6134bee14462af955c6c832221caf1620a4d93ffb74975df15e"
+      },
+      {
+        "relPath": "Шея/второй тест.md",
+        "sha256": "a2f16bfded6bd2b1949847d6bc37fdf818614f2531f269f565ab713d6f732576"
+      }
+    ],
+    "catalogEntryId": "gm",
+    "publishedAt": "2026-08-22T16:54:51.270Z",
+    "author": {
+      "displayName": "Roman Shulgha"
+    }
+  }
+}
