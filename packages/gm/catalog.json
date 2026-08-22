@@ -1,0 +1,15 @@
+{
+  "title": "ГМ",
+  "description": "simple dimple",
+  "categories": [
+    "test"
+  ],
+  "author": {
+    "displayName": "Roman Shulgha"
+  },
+  "releases": [
+    {
+      "releaseVersion": "1.0.0"
+    }
+  ]
+}
