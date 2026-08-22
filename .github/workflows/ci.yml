@@ -33,8 +33,16 @@ jobs:
       - name: Packages catalog validation (Variant B submission gate)
         run: npm run check:packages
 
-      - name: Regen-diff (site/ matches the generator output)
-        run: npm run check:regen-diff
+      # NOTE: check:regen-diff is intentionally NOT part of CI. Submission PRs add
+      # packages/ without regenerated site/ (the proxy cannot run the generator), so
+      # a byte-diff gate would block every submission — and after merge it would block
+      # main before the publish job can regenerate. The invariant "site/ matches
+      # packages/" is enforced by the publish job below: it regenerates and bot-commits
+      # site/ on every main push, overwriting any drift. Here we only prove the
+      # generator runs cleanly on the submitted content.
+      - name: Generator smoke on submitted packages
+        if: ${{ github.event_name == 'pull_request' }}
+        run: npm run generate
 
       - name: Wire-type parity (plugin ↔ backend, at the pinned rev)
         run: npm run check:wire-parity
