@@ -15,7 +15,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run typecheck && npm run check:packages && npm run check:regen-diff && npm run check:wire-parity && npm test",
-    "deploy:pages": "wrangler pages deploy --keep-vars",
+    "deploy:pages": "wrangler pages deploy",
     "deploy": "npm run deploy:pages"
   },
   "license": "MIT",

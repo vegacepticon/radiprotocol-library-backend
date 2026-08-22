@@ -87,3 +87,30 @@ jobs:
         run: npm run deploy:pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      # `wrangler pages deploy` rewrites the Pages project config and drops any env vars
+      # that are not in wrangler.toml (wrangler has no --keep-vars for `pages deploy`).
+      # The submit proxy needs GITHUB_TOKEN/GITHUB_REPO/SUBMIT_RATE_LIMIT at runtime, so
+      # re-assert them via the CF API after every deploy. Values live in repo variables /
+      # the existing secret, never in this file.
+      - name: Restore Pages Function env vars
+        if: ${{ always() }}
+        run: |
+          curl -sS -X PATCH \
+            "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CF_ACCOUNT_ID }}/pages/projects/radiprotocol" \
+            -H "authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "content-type: application/json" \
+            --data '{
+              "deployment_configs": {
+                "production": {"env_vars": {
+                  "GITHUB_REPO": {"type": "plain_text", "value": "${{ vars.SUBMIT_GITHUB_REPO }}"},
+                  "GITHUB_TOKEN": {"type": "plain_text", "value": "${{ secrets.SUBMIT_GITHUB_TOKEN }}"},
+                  "SUBMIT_RATE_LIMIT": {"type": "plain_text", "value": "${{ vars.SUBMIT_RATE_LIMIT || '5' }}"}
+                }},
+                "preview": {"env_vars": {
+                  "GITHUB_REPO": {"type": "plain_text", "value": "${{ vars.SUBMIT_GITHUB_REPO }}"},
+                  "GITHUB_TOKEN": {"type": "plain_text", "value": "${{ secrets.SUBMIT_GITHUB_TOKEN }}"},
+                  "SUBMIT_RATE_LIMIT": {"type": "plain_text", "value": "${{ vars.SUBMIT_RATE_LIMIT || '5' }}"}
+                }}
+              }
+            }' | tee /dev/stderr | grep -q '"success":true'
