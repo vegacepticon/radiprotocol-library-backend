@@ -113,4 +113,4 @@ jobs:
                   "SUBMIT_RATE_LIMIT": {"type": "plain_text", "value": "${{ vars.SUBMIT_RATE_LIMIT || '5' }}"}
                 }}
               }
-            }' | tee /dev/stderr | grep -q '"success":true'
+            }' | tee /dev/stderr | python3 -c 'import json,sys; d=json.load(sys.stdin); sys.exit(0 if d.get("success") else 1)'
