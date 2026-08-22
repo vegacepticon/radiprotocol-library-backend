@@ -14,9 +14,28 @@
 // (fine-grained PAT: Contents read/write on this repo ONLY).
 //
 // Env vars (Pages project settings):
-//   GITHUB_TOKEN        — PAT with Contents:read/write on the backend repo
-//   GITHUB_REPO         — "vegacepticon/radiprotocol-library-backend"
-//   SUBMIT_RATE_LIMIT   — optional, submissions per IP per hour (default 5)
+//   SUBMIT_RATE_LIMIT   — submissions per IP per hour (default 5)
+//
+// Runtime config resolution: `wrangler pages deploy` rewrites the Pages project config
+// and drops out-of-band env vars on EVERY deploy, so the values above are stored in the
+// SUBMIT_KV namespace (declared in wrangler.toml, written via the CF API) and read at
+// request time. Env vars are kept as a fallback for local dev (`wrangler pages dev`).
+async function getConfig(env: Record<string, unknown>, kv: KVNamespace | undefined): Promise<{
+  repo: string; token: string; rateLimit: number;
+}> {
+  const kvGet = async (key: string): Promise<string | undefined> => {
+    try { return (await kv?.get(key)) ?? undefined; } catch { return undefined; }
+  };
+  const [kvToken, kvRepo, kvLimit] = await Promise.all([
+    kvGet('GITHUB_TOKEN'), kvGet('GITHUB_REPO'), kvGet('SUBMIT_RATE_LIMIT'),
+  ]);
+  const limitRaw = kvLimit ?? (typeof env['SUBMIT_RATE_LIMIT'] === 'string' ? env['SUBMIT_RATE_LIMIT'] : undefined);
+  return {
+    token: kvToken ?? (typeof env['GITHUB_TOKEN'] === 'string' ? env['GITHUB_TOKEN'] : ''),
+    repo: kvRepo ?? (typeof env['GITHUB_REPO'] === 'string' ? env['GITHUB_REPO'] : 'vegacepticon/radiprotocol-library-backend'),
+    rateLimit: parseInt(typeof limitRaw === 'string' ? limitRaw : '5', 10) || 5,
+  };
+}
 //
 // No patient data flows here by design: the plugin export contains authored protocol
 // text + snippets only; the submit modal warns the author before upload.
@@ -68,23 +87,22 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       : 'anonymous');
   const submitterNote = typeof meta['note'] === 'string' ? meta['note'] : '';
 
-  // 3. Rate limit (per IP, per hour) — best-effort with the Pages KV binding SUBMIT_KV.
+  // 3. Runtime config (KV-first, env-var fallback) + rate limit (per IP, per hour).
   const kv = (context.env as Record<string, unknown>)['SUBMIT_KV'] as KVNamespace | undefined;
+  const config = await getConfig(context.env as Record<string, unknown>, kv);
   if (kv) {
     const ip = context.request.headers.get('cf-connecting-ip') ?? 'unknown';
     const key = `rl:${ip}:${Math.floor(Date.now() / 3_600_000)}`;
     const count = parseInt(await kv.get(key) ?? '0', 10);
-    const limitRaw = (context.env as Record<string, unknown>)['SUBMIT_RATE_LIMIT'];
-    const limit = parseInt(typeof limitRaw === 'string' ? limitRaw : '5', 10) || 5;
-    if (count >= limit) {
+    if (count >= config.rateLimit) {
       return json(429, { ok: false, error: 'submission rate limit reached; try again later' });
     }
     await kv.put(key, String(count + 1), { expirationTtl: 7200 });
   }
 
   // 4. GitHub API: get the default branch head → create a branch → upsert files → open PR.
-  const repo = context.env['GITHUB_REPO'] ?? 'vegacepticon/radiprotocol-library-backend';
-  const token = context.env['GITHUB_TOKEN'] ?? '';
+  const repo = config.repo;
+  const token = config.token;
   if (token === '') return json(503, { ok: false, error: 'submission service not configured (GITHUB_TOKEN missing)' });
   const gh = (path: string, init?: RequestInit) =>
     fetch(`https://api.github.com${path}`, {

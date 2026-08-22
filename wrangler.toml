@@ -2,6 +2,19 @@
 # This is the single committed source of truth for the deploy target: `npm run deploy:pages`
 # reads the project name + upload directory from here, so the command needs no CLI flags
 # and no out-of-repo state. The live project is https://radiprotocol.pages.dev.
+#
+# NOTE on Function runtime config: `wrangler pages deploy` rewrites the Pages project
+# deployment config and DROPS env vars set outside wrangler.toml (there is no --keep-vars
+# for `pages deploy`). Runtime secrets for /api/submit therefore live in the KV namespace
+# below (written out-of-band via the CF API), not in Pages env vars:
+#
+#   GITHUB_TOKEN       — fine-grained PAT, Contents read/write on this repo ONLY
+#   GITHUB_REPO        — "<owner>/<repo>" (default: vegacepticon/radiprotocol-library-backend)
+#   SUBMIT_RATE_LIMIT  — submissions per IP per hour (default 5)
 name = "radiprotocol"
 pages_build_output_dir = "site"
 compatibility_date = "2026-08-01"
+
+[[kv_namespaces]]
+binding = "SUBMIT_KV"
+id = "11c619cb29c04ce5a527a6657096120d"
