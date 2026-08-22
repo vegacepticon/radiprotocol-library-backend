@@ -94,6 +94,10 @@ jobs:
         # owner PAT instead: the main-protection ruleset grants the admin role
         # bypass:always, while everyone else still faces the required check.
         run: |
+          # actions/checkout injects an http.extraheader with the workflow GITHUB_TOKEN;
+          # it takes precedence over the URL credential and makes the push act as the
+          # Actions integration (no ruleset bypass). Clear it so the owner PAT applies.
+          git config --unset-all http.https://github.com/.extraheader || true
           git push "https://x-access-token:${{ secrets.ADMIN_PAT }}@github.com/${GITHUB_REPOSITORY}" HEAD:main
 
       - name: Deploy to Cloudflare Pages (radiprotocol.pages.dev)
