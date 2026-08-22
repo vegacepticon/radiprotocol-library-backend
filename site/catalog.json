@@ -28,6 +28,19 @@
       "updatedAt": "2026-01-01T00:00:00.000Z"
     },
     {
+      "packageId": "e2e-pipeline-test",
+      "title": "E2E Pipeline Test",
+      "description": "Temporary end-to-end test of the community library submission pipeline.",
+      "author": {
+        "displayName": "Roman Shulgha"
+      },
+      "latestVersion": "1.0.0",
+      "categories": [
+        "community"
+      ],
+      "updatedAt": "2026-08-22T00:00:00.000Z"
+    },
+    {
       "packageId": "КТ-грудная-клетка",
       "title": "КТ грудной клетки",
       "description": "Протокол КТ грудной клетки (Cyrillic packageId round-trip).",
