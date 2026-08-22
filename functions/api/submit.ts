@@ -109,6 +109,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       ...init,
       headers: {
         authorization: `Bearer ${token}`,
+        // GitHub API rejects requests without a User-Agent; Workers fetch() sends none.
+        'user-agent': 'RadiProtocol-Library-Submit',
         accept: 'application/vnd.github+json',
         'x-github-api-version': '2022-11-28',
         'content-type': 'application/json',
