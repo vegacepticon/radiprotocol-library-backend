@@ -1,0 +1,15 @@
+{
+  "title": "ПКОП",
+  "description": "Подробный протокол описания пояснично-крестцового отдела позвоночника",
+  "categories": [
+    "lumbosacral-spine"
+  ],
+  "author": {
+    "displayName": "Roman"
+  },
+  "releases": [
+    {
+      "releaseVersion": "1.0.0"
+    }
+  ]
+}
