@@ -1,0 +1,1582 @@
+{
+  "manifest": {
+    "schema": "radiprotocol.package",
+    "version": 1,
+    "packageId": "1",
+    "releaseVersion": "1",
+    "protocolDoc": {
+      "schema": "radiprotocol.protocol",
+      "version": 1,
+      "id": "protocol-1779448159212-4lwm5k",
+      "title": "ОБП short",
+      "createdAt": "2026-05-22T11:09:19.212Z",
+      "updatedAt": "2026-08-22T16:42:41.841Z",
+      "nodes": [
+        {
+          "id": "node-1779448161445-gewg28",
+          "kind": "start",
+          "x": -6964,
+          "y": 364,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(76, 175, 80, 0.28)",
+          "fields": {}
+        },
+        {
+          "id": "node-1779448182733-ahj3o6",
+          "kind": "question",
+          "x": -3193,
+          "y": -364,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть изменения в печени?",
+          "fields": {
+            "questionText": "Есть изменения в печени?",
+            "startPointEnabled": true
+          }
+        },
+        {
+          "id": "node-1779448197695-p12gqk",
+          "kind": "answer",
+          "x": -2388,
+          "y": -517,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "displayLabel": "Нет",
+            "separator": "space",
+            "answerText": ""
+          }
+        },
+        {
+          "id": "node-1779448291954-16ea9z",
+          "kind": "question",
+          "x": -2036,
+          "y": -372,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть изменения в почках?",
+          "fields": {
+            "questionText": "Есть изменения в почках?"
+          }
+        },
+        {
+          "id": "node-1779448306520-d07bwo",
+          "kind": "answer",
+          "x": -1684,
+          "y": -517,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "displayLabel": "Нет",
+            "separator": "space",
+            "answerText": ""
+          }
+        },
+        {
+          "id": "node-1779448340020-y8ed6h",
+          "kind": "question",
+          "x": -1332,
+          "y": -372,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть изменения в селезенке?",
+          "fields": {
+            "questionText": "Есть изменения в селезенке?"
+          }
+        },
+        {
+          "id": "node-1779448350295-7s4que",
+          "kind": "answer",
+          "x": -980,
+          "y": -517,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "displayLabel": "Нет",
+            "separator": "space",
+            "answerText": ""
+          }
+        },
+        {
+          "id": "node-1779448364935-o5ek4m",
+          "kind": "question",
+          "x": -628,
+          "y": -372,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть изменения в надпочечниках?",
+          "fields": {
+            "questionText": "Есть изменения в надпочечниках?"
+          }
+        },
+        {
+          "id": "node-1779448389979-ukmcxl",
+          "kind": "answer",
+          "x": -276,
+          "y": -553,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "displayLabel": "Нет",
+            "separator": "space",
+            "answerText": ""
+          }
+        },
+        {
+          "id": "node-1779448410271-wa5mi6",
+          "kind": "question",
+          "x": 76,
+          "y": -345,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть изменения в поджелудочной железе?",
+          "fields": {
+            "questionText": "Есть изменения в поджелудочной железе?"
+          }
+        },
+        {
+          "id": "node-1779448433760-x3fkef",
+          "kind": "answer",
+          "x": 428,
+          "y": -553,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "displayLabel": "Нет",
+            "separator": "space",
+            "answerText": ""
+          }
+        },
+        {
+          "id": "node-1779448882394-hez6c4",
+          "kind": "answer",
+          "x": -6260,
+          "y": -41,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "В легких свежих очаговых и инфильтративных изменений не выявлено.",
+          "fields": {
+            "answerText": "В легких свежих очаговых и инфильтративных изменений не выявлено.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1779448982929-3yx8g3",
+          "kind": "answer",
+          "x": -6243,
+          "y": 114,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Укажу характер изменений в легких",
+          "fields": {
+            "answerText": "Укажу характер изменений в легких",
+            "displayLabel": "Есть",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1779449002000-xnvz0w",
+          "kind": "snippet",
+          "x": -6260,
+          "y": 312,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "snippet",
+          "fields": {
+            "subfolderPath": "Органы грудной клетки",
+            "snippetLabel": "snippet"
+          }
+        },
+        {
+          "id": "node-1779449413949-l0nid7",
+          "kind": "question",
+          "x": -5901,
+          "y": 321,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Трахея и главные бронхи проходимы, не деформированы, обычного диаметра?",
+          "fields": {
+            "questionText": "Трахея и главные бронхи проходимы, не деформированы, обычного диаметра?"
+          }
+        },
+        {
+          "id": "node-1779449477502-c45alx",
+          "kind": "answer",
+          "x": -5556,
+          "y": 222,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Трахея и главные бронхи проходимы, не деформированы, обычного диаметра.",
+          "fields": {
+            "answerText": "Трахея и главные бронхи проходимы, не деформированы, обычного диаметра.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779449486435-j3c754",
+          "kind": "answer",
+          "x": -5554,
+          "y": 435,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу какие есть изменения:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1779449527388-aqqkv8",
+          "kind": "question",
+          "x": -5204,
+          "y": 337,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Лимфоузлы средостения увеличены?",
+          "fields": {
+            "questionText": "Лимфоузлы средостения увеличены?"
+          }
+        },
+        {
+          "id": "node-1779449544424-4wb531",
+          "kind": "answer",
+          "x": -4852,
+          "y": 240,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Лимфоузлы средостения не увеличены.",
+          "fields": {
+            "answerText": "Лимфоузлы средостения не увеличены.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1779449563720-1781kf",
+          "kind": "answer",
+          "x": -4874,
+          "y": 454,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу какие есть изменения:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1779449585307-2tgd7v",
+          "kind": "question",
+          "x": -4500,
+          "y": 337,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Плевральные полости и полость перикарда свободны?",
+          "fields": {
+            "questionText": "Плевральные полости и полость перикарда свободны?"
+          }
+        },
+        {
+          "id": "node-1779449604885-2rkg7u",
+          "kind": "answer",
+          "x": -4148,
+          "y": 504,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Плевральные полости и полость перикарда свободны.",
+          "fields": {
+            "answerText": "Плевральные полости и полость перикарда свободны.",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779449632223-w2qkow",
+          "kind": "snippet",
+          "x": -4148,
+          "y": 328,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "snippet",
+          "fields": {
+            "subfolderPath": "Органы грудной клетки",
+            "snippetLabel": "snippet"
+          }
+        },
+        {
+          "id": "node-1779449658634-yxgz61",
+          "kind": "answer",
+          "x": -4148,
+          "y": 134,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Укажу какие есть изменения:",
+            "freeText": true
+          }
+        },
+        {
+          "id": "node-1779449772236-7hv455",
+          "kind": "answer",
+          "x": -2388,
+          "y": -341,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==опишу изменения со стороны печени==",
+          "fields": {
+            "answerText": "==опишу изменения со стороны печени==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779449791405-e7o5s7",
+          "kind": "snippet",
+          "x": -2388,
+          "y": 280,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "snippet",
+          "fields": {
+            "subfolderPath": "Органы брюшной полости",
+            "snippetLabel": "snippet"
+          }
+        },
+        {
+          "id": "node-1779449823660-dgcvpk",
+          "kind": "answer",
+          "x": -1684,
+          "y": -341,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==опишу изменения со стороны почек==",
+          "fields": {
+            "answerText": "==опишу изменения со стороны почек==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779449844884-yjff6r",
+          "kind": "snippet",
+          "x": -1684,
+          "y": 192,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "snippet",
+          "fields": {
+            "subfolderPath": "Органы забрюшинного пространства/Почки",
+            "snippetLabel": "snippet"
+          }
+        },
+        {
+          "id": "node-1779449864324-u3y7u8",
+          "kind": "answer",
+          "x": -980,
+          "y": -341,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==опишу изменения со стороны селезенки==",
+          "fields": {
+            "answerText": "==опишу изменения со стороны селезенки==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779449880120-jf71te",
+          "kind": "snippet",
+          "x": -980,
+          "y": 104,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "snippet",
+          "fields": {
+            "subfolderPath": "Органы брюшной полости",
+            "snippetLabel": "snippet"
+          }
+        },
+        {
+          "id": "node-1779449901532-izc7s2",
+          "kind": "answer",
+          "x": -276,
+          "y": -377,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==опишу изменения со стороны надпочечников==",
+          "fields": {
+            "answerText": "==опишу изменения со стороны надпочечников==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779449918474-87wvnz",
+          "kind": "snippet",
+          "x": -276,
+          "y": 63,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "snippet",
+          "fields": {
+            "subfolderPath": "Органы забрюшинного пространства/Надпочечники",
+            "snippetLabel": "snippet"
+          }
+        },
+        {
+          "id": "node-1779449936999-emg4d9",
+          "kind": "answer",
+          "x": 428,
+          "y": -377,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==укажу изменения со стороны поджелудочной железы==",
+          "fields": {
+            "answerText": "==укажу изменения со стороны поджелудочной железы==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779449983699-xmfnns",
+          "kind": "snippet",
+          "x": 428,
+          "y": 152,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "snippet",
+          "fields": {
+            "subfolderPath": "Органы брюшной полости",
+            "snippetLabel": "snippet"
+          }
+        },
+        {
+          "id": "node-1779451155403-yerjtb",
+          "kind": "snippet",
+          "x": 780,
+          "y": -345,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "общая формулировка",
+          "fields": {
+            "snippetPath": "Органы брюшной полости/Формулировка - патологических образований в органах брюшной полости не выявлено.md",
+            "snippetLabel": "общая формулировка"
+          }
+        },
+        {
+          "id": "node-1779451311551-23ppj8",
+          "kind": "question",
+          "x": 4300,
+          "y": -469,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Пол пациента?",
+          "fields": {
+            "questionText": "Пол пациента?"
+          }
+        },
+        {
+          "id": "node-1779451716386-d28p6w",
+          "kind": "snippet",
+          "x": 4652,
+          "y": -557,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "женский",
+          "fields": {
+            "snippetPath": "Органы малого таза/Формулировка - описание органов малого таза у женщин - short.md",
+            "snippetLabel": "женский"
+          }
+        },
+        {
+          "id": "node-1779451742214-5uk1s1",
+          "kind": "snippet",
+          "x": 4652,
+          "y": 156,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "мужской",
+          "fields": {
+            "snippetPath": "Органы малого таза/Формулировка - описание органов малого таза у мужчин - short.md",
+            "snippetLabel": "мужской"
+          }
+        },
+        {
+          "id": "node-1779451797974-i0l0c1",
+          "kind": "answer",
+          "x": 6194,
+          "y": -558,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Подвздошные лимфоузлы не увеличены.",
+          "fields": {
+            "answerText": "Подвздошные лимфоузлы не увеличены.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1779452107079-but2vj",
+          "kind": "answer",
+          "x": 5356,
+          "y": 119,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Подвздошные лимфоузлы: ==укажу какие и насколько увеличены==",
+          "fields": {
+            "answerText": "Подвздошные лимфоузлы: ==укажу какие и насколько увеличены==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779452190198-84fy6g",
+          "kind": "question",
+          "x": 5004,
+          "y": -469,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Подвздошные лимфоузлы увеличены?",
+          "fields": {
+            "questionText": "Подвздошные лимфоузлы увеличены?"
+          }
+        },
+        {
+          "id": "node-1779452245177-m46jud",
+          "kind": "question",
+          "x": 6060,
+          "y": -257,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Костные деструктивные изменения есть?",
+          "fields": {
+            "questionText": "Костные деструктивные изменения есть?"
+          }
+        },
+        {
+          "id": "node-1779452425954-1159id",
+          "kind": "answer",
+          "x": 6412,
+          "y": -381,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Костно-деструктивных изменений не выявлено.",
+          "fields": {
+            "answerText": "Костно-деструктивных изменений не выявлено.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1779452436863-jzevrq",
+          "kind": "answer",
+          "x": 6412,
+          "y": -205,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==укажу где вижу деструктивные изменения==",
+          "fields": {
+            "answerText": "==укажу где вижу деструктивные изменения==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1779452464764-gsg0jw",
+          "kind": "text-block",
+          "x": 6764,
+          "y": -292,
+          "width": 200,
+          "height": 149,
+          "color": "rgba(255, 235, 59, 0.24)",
+          "text": "\n\nЗаключение:\n\n\n\nРекомендации:\nКонсультация направившего специалиста.",
+          "fields": {
+            "content": "\n\nЗаключение:\n\n\n\nРекомендации:\nКонсультация направившего специалиста."
+          }
+        },
+        {
+          "id": "node-1779689355383-y18qq0",
+          "kind": "text-block",
+          "x": 3244,
+          "y": -345,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 235, 59, 0.24)",
+          "text": "\n",
+          "fields": {
+            "content": "\n"
+          }
+        },
+        {
+          "id": "node-1779695144502-hpkh7q",
+          "kind": "question",
+          "x": 1132,
+          "y": -345,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Желчный пузырь изменен?",
+          "fields": {
+            "questionText": "Желчный пузырь изменен?"
+          }
+        },
+        {
+          "id": "node-1779695156845-715qo0",
+          "kind": "answer",
+          "x": 1484,
+          "y": -554,
+          "width": 200,
+          "height": 81,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Желчный пузырь не увеличен, рентгеноконтрастных включений в нем не выявлено.",
+          "fields": {
+            "answerText": "Желчный пузырь не увеличен, рентгеноконтрастных включений в нем не выявлено.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1779695176716-og39jg",
+          "kind": "answer",
+          "x": 1484,
+          "y": -377,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==укажу что не так с желчным пузырем==",
+          "fields": {
+            "answerText": "==укажу что не так с желчным пузырем==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780313476576-xb1wxa",
+          "kind": "question",
+          "x": 3596,
+          "y": -345,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Нужно описание ОМТ?",
+          "fields": {
+            "questionText": "Нужно описание ОМТ?"
+          }
+        },
+        {
+          "id": "node-1780313643677-vk0au0",
+          "kind": "answer",
+          "x": 3948,
+          "y": -469,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1780313680317-g5qcsk",
+          "kind": "answer",
+          "x": 5356,
+          "y": 296,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1780648229969-teedxv",
+          "kind": "question",
+          "x": -3806,
+          "y": 256,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Нужно описание органов брюшной полости?",
+          "fields": {
+            "questionText": "Нужно описание органов брюшной полости?",
+            "optionOrder": [
+              "edge-1785671239793-e45bml",
+              "edge-1780648300811-ccf173",
+              "edge-1780648339095-o4jomg"
+            ]
+          }
+        },
+        {
+          "id": "node-1780648300807-v2p92n",
+          "kind": "answer",
+          "x": 5356,
+          "y": 472,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "",
+          "fields": {
+            "answerText": "",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1781075323495-1jmf55",
+          "kind": "question",
+          "x": 1836,
+          "y": -345,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Кишечник изменен?",
+          "fields": {
+            "questionText": "Кишечник изменен?"
+          }
+        },
+        {
+          "id": "node-1781075348062-7pouhe",
+          "kind": "answer",
+          "x": 2188,
+          "y": -583,
+          "width": 200,
+          "height": 115,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Положение петель кишечника обычное, признаков патологического утолщения стенки кишки и нарушения просвета не выявлено.",
+          "fields": {
+            "answerText": "Положение петель кишечника обычное, признаков патологического утолщения стенки кишки и нарушения просвета не выявлено.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1781075358967-39leyi",
+          "kind": "answer",
+          "x": 2188,
+          "y": -372,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==укажу что не так с кишечником==",
+          "fields": {
+            "answerText": "==укажу что не так с кишечником==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1781082375141-bpzzev",
+          "kind": "question",
+          "x": 2540,
+          "y": -354,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "Есть изменения со стороны лимфоузлов забрюшинного пространства и/или брюшной полости?",
+          "fields": {
+            "questionText": "Есть изменения со стороны лимфоузлов забрюшинного пространства и/или брюшной полости?"
+          }
+        },
+        {
+          "id": "node-1781082410369-n215jg",
+          "kind": "answer",
+          "x": 2891,
+          "y": -469,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Забрюшинные лимфоузлы не увеличены.",
+          "fields": {
+            "answerText": "Забрюшинные лимфоузлы не увеличены.",
+            "displayLabel": "Нет"
+          }
+        },
+        {
+          "id": "node-1781082422136-7h54d3",
+          "kind": "answer",
+          "x": 2892,
+          "y": 332,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "==укажу где и какие лимфоузлы изменены==",
+          "fields": {
+            "answerText": "==укажу где и какие лимфоузлы изменены==",
+            "displayLabel": "Да"
+          }
+        },
+        {
+          "id": "node-1781082521081-tzm3km",
+          "kind": "snippet",
+          "x": 2188,
+          "y": 332,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(156, 39, 176, 0.24)",
+          "text": "Snippet",
+          "fields": {
+            "subfolderPath": "Органы брюшной полости"
+          }
+        },
+        {
+          "id": "node-1781247858551-xqvv4r",
+          "kind": "answer",
+          "x": 1484,
+          "y": 231,
+          "width": 200,
+          "height": 98,
+          "color": "rgba(255, 193, 7, 0.28)",
+          "text": "Желчный пузырь не визуализируется, в ложе пузыря металлической плотности клипсы.",
+          "fields": {
+            "answerText": "Желчный пузырь не визуализируется, в ложе пузыря металлической плотности клипсы.",
+            "displayLabel": "Удален"
+          }
+        },
+        {
+          "id": "node-1781854671843-o8h31f",
+          "kind": "text-block",
+          "x": 5708,
+          "y": -257,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(255, 235, 59, 0.24)",
+          "text": "\n",
+          "fields": {
+            "content": "\n"
+          }
+        },
+        {
+          "id": "node-1787416810734-uvghyt",
+          "kind": "question",
+          "x": -6610,
+          "y": 328,
+          "width": 200,
+          "height": 80,
+          "color": "rgba(33, 150, 243, 0.24)",
+          "text": "В легких есть свежие очаговые и инфильтративные изменения?",
+          "fields": {
+            "questionText": "В легких есть свежие очаговые и инфильтративные изменения?",
+            "loop": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "edge-1779448197698-t0nw4z",
+          "fromNodeId": "node-1779448182733-ahj3o6",
+          "toNodeId": "node-1779448197695-p12gqk",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779448291958-t4mvy1",
+          "fromNodeId": "node-1779448197695-p12gqk",
+          "toNodeId": "node-1779448291954-16ea9z"
+        },
+        {
+          "id": "edge-1779448306522-2kdfxb",
+          "fromNodeId": "node-1779448291954-16ea9z",
+          "toNodeId": "node-1779448306520-d07bwo",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779448340022-2odanl",
+          "fromNodeId": "node-1779448306520-d07bwo",
+          "toNodeId": "node-1779448340020-y8ed6h"
+        },
+        {
+          "id": "edge-1779448350297-w85gdl",
+          "fromNodeId": "node-1779448340020-y8ed6h",
+          "toNodeId": "node-1779448350295-7s4que",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779448364937-hdestm",
+          "fromNodeId": "node-1779448350295-7s4que",
+          "toNodeId": "node-1779448364935-o5ek4m"
+        },
+        {
+          "id": "edge-1779448389982-i6psv8",
+          "fromNodeId": "node-1779448364935-o5ek4m",
+          "toNodeId": "node-1779448389979-ukmcxl",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779448410273-b153cg",
+          "fromNodeId": "node-1779448389979-ukmcxl",
+          "toNodeId": "node-1779448410271-wa5mi6"
+        },
+        {
+          "id": "edge-1779448433762-ipd3as",
+          "fromNodeId": "node-1779448410271-wa5mi6",
+          "toNodeId": "node-1779448433760-x3fkef",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779449413950-dxkqt6",
+          "fromNodeId": "node-1779448882394-hez6c4",
+          "toNodeId": "node-1779449413949-l0nid7"
+        },
+        {
+          "id": "edge-1779449477504-w0x48i",
+          "fromNodeId": "node-1779449413949-l0nid7",
+          "toNodeId": "node-1779449477502-c45alx",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779449486437-0tmol5",
+          "fromNodeId": "node-1779449413949-l0nid7",
+          "toNodeId": "node-1779449486435-j3c754",
+          "label": "Укажу какие есть изменения:"
+        },
+        {
+          "id": "edge-1779449527390-vxq045",
+          "fromNodeId": "node-1779449477502-c45alx",
+          "toNodeId": "node-1779449527388-aqqkv8"
+        },
+        {
+          "id": "edge-1779449538167-37vnbu",
+          "fromNodeId": "node-1779449486435-j3c754",
+          "toNodeId": "node-1779449527388-aqqkv8"
+        },
+        {
+          "id": "edge-1779449544427-tfcp9j",
+          "fromNodeId": "node-1779449527388-aqqkv8",
+          "toNodeId": "node-1779449544424-4wb531",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779449563721-is2bpl",
+          "fromNodeId": "node-1779449527388-aqqkv8",
+          "toNodeId": "node-1779449563720-1781kf",
+          "label": "Укажу какие есть изменения:"
+        },
+        {
+          "id": "edge-1779449585310-lm8m6i",
+          "fromNodeId": "node-1779449544424-4wb531",
+          "toNodeId": "node-1779449585307-2tgd7v"
+        },
+        {
+          "id": "edge-1779449601332-wmtoyc",
+          "fromNodeId": "node-1779449563720-1781kf",
+          "toNodeId": "node-1779449585307-2tgd7v"
+        },
+        {
+          "id": "edge-1779449604888-2v8gae",
+          "fromNodeId": "node-1779449585307-2tgd7v",
+          "toNodeId": "node-1779449604885-2rkg7u",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779449632226-g3k627",
+          "fromNodeId": "node-1779449585307-2tgd7v",
+          "toNodeId": "node-1779449632223-w2qkow",
+          "label": "snippet"
+        },
+        {
+          "id": "edge-1779449658637-je27s2",
+          "fromNodeId": "node-1779449585307-2tgd7v",
+          "toNodeId": "node-1779449658634-yxgz61",
+          "label": "Укажу какие есть изменения:"
+        },
+        {
+          "id": "edge-1779449772239-3xlccs",
+          "fromNodeId": "node-1779448182733-ahj3o6",
+          "toNodeId": "node-1779449772236-7hv455",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779449791406-kudpmw",
+          "fromNodeId": "node-1779448182733-ahj3o6",
+          "toNodeId": "node-1779449791405-e7o5s7",
+          "label": "snippet"
+        },
+        {
+          "id": "edge-1779449814026-2t2ai6",
+          "fromNodeId": "node-1779449772236-7hv455",
+          "toNodeId": "node-1779448291954-16ea9z"
+        },
+        {
+          "id": "edge-1779449816249-ra1uqw",
+          "fromNodeId": "node-1779449791405-e7o5s7",
+          "toNodeId": "node-1779448291954-16ea9z"
+        },
+        {
+          "id": "edge-1779449823663-i4pxx9",
+          "fromNodeId": "node-1779448291954-16ea9z",
+          "toNodeId": "node-1779449823660-dgcvpk",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779449844887-ov5mmo",
+          "fromNodeId": "node-1779448291954-16ea9z",
+          "toNodeId": "node-1779449844884-yjff6r",
+          "label": "snippet"
+        },
+        {
+          "id": "edge-1779449858066-d4lv1i",
+          "fromNodeId": "node-1779449823660-dgcvpk",
+          "toNodeId": "node-1779448340020-y8ed6h"
+        },
+        {
+          "id": "edge-1779449860209-gkbqsa",
+          "fromNodeId": "node-1779449844884-yjff6r",
+          "toNodeId": "node-1779448340020-y8ed6h"
+        },
+        {
+          "id": "edge-1779449864325-phg1oa",
+          "fromNodeId": "node-1779448340020-y8ed6h",
+          "toNodeId": "node-1779449864324-u3y7u8",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779449880123-h3z9ul",
+          "fromNodeId": "node-1779448340020-y8ed6h",
+          "toNodeId": "node-1779449880120-jf71te",
+          "label": "snippet"
+        },
+        {
+          "id": "edge-1779449896062-t84z6r",
+          "fromNodeId": "node-1779449864324-u3y7u8",
+          "toNodeId": "node-1779448364935-o5ek4m"
+        },
+        {
+          "id": "edge-1779449897958-u9hp7t",
+          "fromNodeId": "node-1779449880120-jf71te",
+          "toNodeId": "node-1779448364935-o5ek4m"
+        },
+        {
+          "id": "edge-1779449901535-5ial57",
+          "fromNodeId": "node-1779448364935-o5ek4m",
+          "toNodeId": "node-1779449901532-izc7s2",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779449918476-7vdjup",
+          "fromNodeId": "node-1779448364935-o5ek4m",
+          "toNodeId": "node-1779449918474-87wvnz",
+          "label": "snippet"
+        },
+        {
+          "id": "edge-1779449930745-2dkf3k",
+          "fromNodeId": "node-1779449901532-izc7s2",
+          "toNodeId": "node-1779448410271-wa5mi6"
+        },
+        {
+          "id": "edge-1779449932463-azbabm",
+          "fromNodeId": "node-1779449918474-87wvnz",
+          "toNodeId": "node-1779448410271-wa5mi6"
+        },
+        {
+          "id": "edge-1779449937001-51s9bt",
+          "fromNodeId": "node-1779448410271-wa5mi6",
+          "toNodeId": "node-1779449936999-emg4d9",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779449983700-n785cs",
+          "fromNodeId": "node-1779448410271-wa5mi6",
+          "toNodeId": "node-1779449983699-xmfnns",
+          "label": "snippet"
+        },
+        {
+          "id": "edge-1779451155404-l1pj8h",
+          "fromNodeId": "node-1779448433760-x3fkef",
+          "toNodeId": "node-1779451155403-yerjtb",
+          "label": "общая формулировка"
+        },
+        {
+          "id": "edge-1779451165739-hiwb0u",
+          "fromNodeId": "node-1779449936999-emg4d9",
+          "toNodeId": "node-1779451155403-yerjtb",
+          "label": "общая формулировка"
+        },
+        {
+          "id": "edge-1779451167680-1319g0",
+          "fromNodeId": "node-1779449983699-xmfnns",
+          "toNodeId": "node-1779451155403-yerjtb",
+          "label": "общая формулировка"
+        },
+        {
+          "id": "edge-1779451716389-gsgnmn",
+          "fromNodeId": "node-1779451311551-23ppj8",
+          "toNodeId": "node-1779451716386-d28p6w",
+          "label": "женский"
+        },
+        {
+          "id": "edge-1779451742217-f7ud8k",
+          "fromNodeId": "node-1779451311551-23ppj8",
+          "toNodeId": "node-1779451742214-5uk1s1",
+          "label": "мужской"
+        },
+        {
+          "id": "edge-1779452203456-3r31uz",
+          "fromNodeId": "node-1779451716386-d28p6w",
+          "toNodeId": "node-1779452190198-84fy6g"
+        },
+        {
+          "id": "edge-1779452205760-bvrak4",
+          "fromNodeId": "node-1779451742214-5uk1s1",
+          "toNodeId": "node-1779452190198-84fy6g"
+        },
+        {
+          "id": "edge-1779452208563-axfs3p",
+          "fromNodeId": "node-1779452190198-84fy6g",
+          "toNodeId": "node-1779451797974-i0l0c1",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779452211790-p3hdkw",
+          "fromNodeId": "node-1779452190198-84fy6g",
+          "toNodeId": "node-1779452107079-but2vj",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779452425958-dyac40",
+          "fromNodeId": "node-1779452245177-m46jud",
+          "toNodeId": "node-1779452425954-1159id",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779452436866-vp9p8h",
+          "fromNodeId": "node-1779452245177-m46jud",
+          "toNodeId": "node-1779452436863-jzevrq",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1779452464766-4lgk77",
+          "fromNodeId": "node-1779452425954-1159id",
+          "toNodeId": "node-1779452464764-gsg0jw"
+        },
+        {
+          "id": "edge-1779452485653-gheb7o",
+          "fromNodeId": "node-1779452436863-jzevrq",
+          "toNodeId": "node-1779452464764-gsg0jw"
+        },
+        {
+          "id": "edge-1779695144507-crbqre",
+          "fromNodeId": "node-1779451155403-yerjtb",
+          "toNodeId": "node-1779695144502-hpkh7q"
+        },
+        {
+          "id": "edge-1779695156849-iu6lpe",
+          "fromNodeId": "node-1779695144502-hpkh7q",
+          "toNodeId": "node-1779695156845-715qo0",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1779695176720-vh8jxd",
+          "fromNodeId": "node-1779695144502-hpkh7q",
+          "toNodeId": "node-1779695176716-og39jg",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780313476580-jry5fe",
+          "fromNodeId": "node-1779689355383-y18qq0",
+          "toNodeId": "node-1780313476576-xb1wxa"
+        },
+        {
+          "id": "edge-1780313662348-0mexfi",
+          "fromNodeId": "node-1780313476576-xb1wxa",
+          "toNodeId": "node-1780313643677-vk0au0",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1780313672049-89vakt",
+          "fromNodeId": "node-1780313643677-vk0au0",
+          "toNodeId": "node-1779451311551-23ppj8"
+        },
+        {
+          "id": "edge-1780313680324-3hlenc",
+          "fromNodeId": "node-1780313476576-xb1wxa",
+          "toNodeId": "node-1780313680317-g5qcsk",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1780648258489-d7s3qz",
+          "fromNodeId": "node-1779449658634-yxgz61",
+          "toNodeId": "node-1780648229969-teedxv"
+        },
+        {
+          "id": "edge-1780648261410-hjr8n6",
+          "fromNodeId": "node-1779449632223-w2qkow",
+          "toNodeId": "node-1780648229969-teedxv"
+        },
+        {
+          "id": "edge-1780648264173-me6tkt",
+          "fromNodeId": "node-1779449604885-2rkg7u",
+          "toNodeId": "node-1780648229969-teedxv"
+        },
+        {
+          "id": "edge-1780648300811-ccf173",
+          "fromNodeId": "node-1780648229969-teedxv",
+          "toNodeId": "node-1780648300807-v2p92n",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1781075340741-wnjvw4",
+          "fromNodeId": "node-1779695156845-715qo0",
+          "toNodeId": "node-1781075323495-1jmf55"
+        },
+        {
+          "id": "edge-1781075343382-8ywvdt",
+          "fromNodeId": "node-1779695176716-og39jg",
+          "toNodeId": "node-1781075323495-1jmf55"
+        },
+        {
+          "id": "edge-1781075348065-4rq51r",
+          "fromNodeId": "node-1781075323495-1jmf55",
+          "toNodeId": "node-1781075348062-7pouhe",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1781075358970-c851e4",
+          "fromNodeId": "node-1781075323495-1jmf55",
+          "toNodeId": "node-1781075358967-39leyi",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1781082403441-jqjkzh",
+          "fromNodeId": "node-1781075348062-7pouhe",
+          "toNodeId": "node-1781082375141-bpzzev"
+        },
+        {
+          "id": "edge-1781082405832-e728dp",
+          "fromNodeId": "node-1781075358967-39leyi",
+          "toNodeId": "node-1781082375141-bpzzev"
+        },
+        {
+          "id": "edge-1781082410372-fd1xch",
+          "fromNodeId": "node-1781082375141-bpzzev",
+          "toNodeId": "node-1781082410369-n215jg",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1781082417997-lkvkng",
+          "fromNodeId": "node-1781082410369-n215jg",
+          "toNodeId": "node-1779689355383-y18qq0"
+        },
+        {
+          "id": "edge-1781082422138-kqhj0d",
+          "fromNodeId": "node-1781082375141-bpzzev",
+          "toNodeId": "node-1781082422136-7h54d3",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1781082438499-wqa5e1",
+          "fromNodeId": "node-1781082422136-7h54d3",
+          "toNodeId": "node-1779689355383-y18qq0"
+        },
+        {
+          "id": "edge-1781082521084-yle6kf",
+          "fromNodeId": "node-1781075323495-1jmf55",
+          "toNodeId": "node-1781082521081-tzm3km",
+          "label": "Snippet"
+        },
+        {
+          "id": "edge-1781082533505-4b2h47",
+          "fromNodeId": "node-1781082521081-tzm3km",
+          "toNodeId": "node-1781082375141-bpzzev"
+        },
+        {
+          "id": "edge-1781247858554-q8pvo6",
+          "fromNodeId": "node-1779695144502-hpkh7q",
+          "toNodeId": "node-1781247858551-xqvv4r",
+          "label": "Удален"
+        },
+        {
+          "id": "edge-1781247893147-r08uvj",
+          "fromNodeId": "node-1781247858551-xqvv4r",
+          "toNodeId": "node-1781075323495-1jmf55"
+        },
+        {
+          "id": "edge-1781854688523-yv5qeo",
+          "fromNodeId": "node-1779451797974-i0l0c1",
+          "toNodeId": "node-1781854671843-o8h31f"
+        },
+        {
+          "id": "edge-1781854692059-8b4jil",
+          "fromNodeId": "node-1779452107079-but2vj",
+          "toNodeId": "node-1781854671843-o8h31f"
+        },
+        {
+          "id": "edge-1781854694690-fbjcq1",
+          "fromNodeId": "node-1781854671843-o8h31f",
+          "toNodeId": "node-1779452245177-m46jud"
+        },
+        {
+          "id": "edge-1781854725817-9ux28f",
+          "fromNodeId": "node-1780313680317-g5qcsk",
+          "toNodeId": "node-1781854671843-o8h31f"
+        },
+        {
+          "id": "edge-1781854729830-2e3ihg",
+          "fromNodeId": "node-1780648300807-v2p92n",
+          "toNodeId": "node-1781854671843-o8h31f"
+        },
+        {
+          "id": "edge-1785671239793-e45bml",
+          "fromNodeId": "node-1780648229969-teedxv",
+          "toNodeId": "node-1779448182733-ahj3o6",
+          "label": "Да"
+        },
+        {
+          "id": "edge-1787416810737-yjib4c",
+          "fromNodeId": "node-1779448161445-gewg28",
+          "toNodeId": "node-1787416810734-uvghyt"
+        },
+        {
+          "id": "edge-1787416820609-b62sej",
+          "fromNodeId": "node-1787416810734-uvghyt",
+          "toNodeId": "node-1779448882394-hez6c4",
+          "label": "Нет"
+        },
+        {
+          "id": "edge-1787416822699-g8svz9",
+          "fromNodeId": "node-1787416810734-uvghyt",
+          "toNodeId": "node-1779448982929-3yx8g3",
+          "label": "Есть"
+        },
+        {
+          "id": "edge-1787416828988-gkkn32",
+          "fromNodeId": "node-1787416810734-uvghyt",
+          "toNodeId": "node-1779449002000-xnvz0w",
+          "label": "snippet"
+        },
+        {
+          "id": "edge-1787416832319-1gg6vk",
+          "fromNodeId": "node-1787416810734-uvghyt",
+          "toNodeId": "node-1779449413949-l0nid7",
+          "isLoopExit": true,
+          "label": "Все указано, продолжаем"
+        }
+      ],
+      "viewport": {
+        "x": -4033,
+        "y": -51,
+        "zoom": 0.8999999999999999
+      },
+      "selfCheckEnabled": true,
+      "selfCheckItems": [
+        "Блок со списком органов отредактирован?",
+        "Наддиафрагмальные отделы легких просмотрены?"
+      ],
+      "layoutDirection": "LR"
+    },
+    "protocolSha256": "6a81119bfd5b833dab242e9ebd177ce1ca44d22a19ee8649f8c1767e3c0b4b46",
+    "snippetFiles": [
+      {
+        "relPath": "Органы грудной клетки/Атеросклероз грудного отдела аорты и коронарных артерий.md",
+        "sha256": "0b894aceefaf3839e7254a537f571e354cb1e50ac4edd77e675857c834c463ac"
+      },
+      {
+        "relPath": "Органы грудной клетки/Атеросклероз грудного отдела аорты.md",
+        "sha256": "2cc5a55652cfae6b7205211aa02d4d4f9f9668e07e2551647613894924697637"
+      },
+      {
+        "relPath": "Органы грудной клетки/Атеросклероз коронарных артерий.md",
+        "sha256": "6ac59d184f80f5cb505cf0aeff81a88c5382dc664b788fb78d989f0a11cd1e8d"
+      },
+      {
+        "relPath": "Органы грудной клетки/Венозный порт.md",
+        "sha256": "89e746163f1a0eb1d86da9afc5dd1cd01c7a4e08a727aa9e50fcde341ee5f177"
+      },
+      {
+        "relPath": "Органы грудной клетки/Вилочковая железа.md",
+        "sha256": "270465d82f33a39c921ea5619785682f1bfbe183cb40136380a2f5215a656b31"
+      },
+      {
+        "relPath": "Органы грудной клетки/Гравитационные изменения в легких.md",
+        "sha256": "9f6ffc21285ccea3ee0aa8c86ab379da4f396f1ce5ceb862aae10173ee4ebb4d"
+      },
+      {
+        "relPath": "Органы грудной клетки/Грыжа пищеводного отверстия диафрагмы.md",
+        "sha256": "0d1403c472df38103a301faa554aa3c5db08eeb492a5c3e60bf530f56568de16"
+      },
+      {
+        "relPath": "Органы грудной клетки/Двухсторонний плевральный выпот.md",
+        "sha256": "98608df4fe6759708f6c79e8a291c073f58d93a10e23bdd76d2a874bdaf36dd2"
+      },
+      {
+        "relPath": "Органы грудной клетки/Интерстициальные изменения в легких.md",
+        "sha256": "b31597df9d2e8b575b1b79f296582a696d5f797c103b16809b81b902fe07b0c8"
+      },
+      {
+        "relPath": "Органы грудной клетки/Киста перикарда.md",
+        "sha256": "3f906a01c94b837c52e3463c710e96f104751289b0c7fba8264ff0bcfe3f266a"
+      },
+      {
+        "relPath": "Органы грудной клетки/Легочной ствол расширен.md",
+        "sha256": "44a307bb87fd4a37f3bef3025ef6cd74aac4036e3d91264b5f549fa76d484cf4"
+      },
+      {
+        "relPath": "Органы грудной клетки/Линейные плевропневмофиброз.md",
+        "sha256": "b05c4922e4c7fee59939a9efdddd0bc268f2a4f5523e35f5014bfad100073c9e"
+      },
+      {
+        "relPath": "Органы грудной клетки/Односторонний плевральный выпот.md",
+        "sha256": "0bceec7e6229f449a7e96f64885d74655faf1230f7ad1303d9cb29cfec36c17b"
+      },
+      {
+        "relPath": "Органы грудной клетки/Описание пневмонии.md",
+        "sha256": "899f396495addc9ee2b2ec4023b4a1bf882b25aec48ad97e5ae1fd361b6e0405"
+      },
+      {
+        "relPath": "Органы грудной клетки/Паравертебральный фиброз.md",
+        "sha256": "fa339181982208157312c0e18d13e60289895ca100bdcd7505bc29954193666e"
+      },
+      {
+        "relPath": "Органы грудной клетки/Перфузия в легких.md",
+        "sha256": "54fa7cd55e0641859a2b9f4c0ebe2fa4102fcced3b17b1d5d40864c517c683c8"
+      },
+      {
+        "relPath": "Органы грудной клетки/Симптом воздушной бронхограммы.md",
+        "sha256": "d30f98fc63aeaae953925eed7bd00f3227e6e26413f236520b567a2dd78328b9"
+      },
+      {
+        "relPath": "Органы грудной клетки/Увеличение размеров сердца.md",
+        "sha256": "7b1ca3886539ac668de0acd5346566f29fa234c7a61bfc5bf0ee52f12a4e7cbc"
+      },
+      {
+        "relPath": "Органы грудной клетки/Элекстрокардиостимулятор.md",
+        "sha256": "71c35a9457df87f08def587bf37cbb441461ffa786c7160a5ee6b97ab75c71c0"
+      },
+      {
+        "relPath": "Органы грудной клетки/Эмфизема легких.md",
+        "sha256": "5f14fc7b25ab4e5ab11132d14649f1a887840020a495c9137a57526ab50137a7"
+      },
+      {
+        "relPath": "Органы брюшной полости/Атеросклероз брюшной аорты и подвздошных артерий.md",
+        "sha256": "11be2f931e75cdb4a1e1f024c32244cf83d4deaf2a4249b694c4f647c13e6ef2"
+      },
+      {
+        "relPath": "Органы брюшной полости/Вентральная грыжа.md",
+        "sha256": "3018aa62b87bacf317583e7652785eed6afe693dfdbb16930287453b4f5b2850"
+      },
+      {
+        "relPath": "Органы брюшной полости/Гемангиома печени.md",
+        "sha256": "2cde69da14bcaf3e841b6dc478c0ba658dd22dc9975e57db18c2c7f2812370ae"
+      },
+      {
+        "relPath": "Органы брюшной полости/Дивертикулез.md",
+        "sha256": "881b6c5b01b6a981e73e8cc10f6b43482d2fa866f741b28fdcaa32b90a121cc8"
+      },
+      {
+        "relPath": "Органы брюшной полости/Карциноматоз.md",
+        "sha256": "2610db94d5bfb47d3dda117d62246e19f1e2058f1559656687766200efe1535f"
+      },
+      {
+        "relPath": "Органы брюшной полости/Киста печени.md",
+        "sha256": "3c18273a2d6e543946bb4affec39def32b624f830165cfd6c70513651b98b8de"
+      },
+      {
+        "relPath": "Органы брюшной полости/Конкременты в желчном пузыре.md",
+        "sha256": "f59e0a7bd1b9c4f20735fc373b90c4d155a983a6540def3651cae70b5f9f74d1"
+      },
+      {
+        "relPath": "Органы брюшной полости/Мезентериальный панникулит.md",
+        "sha256": "c131d6ec42441f61b809e8f1e8f1d3dc1613fd2a811836f445461b57e8dc6450"
+      },
+      {
+        "relPath": "Органы брюшной полости/Описание печени.md",
+        "sha256": "0d0bdf15e120e4bcf3fbebba6871984d4ddd986f026c52e7813d16f39d7a9551"
+      },
+      {
+        "relPath": "Органы брюшной полости/Перитонеальные свободные тела.md",
+        "sha256": "03b2939dbf6bc5e97d0bd64d61d24c48d4509dd938174a0bb047e5a69f919cda"
+      },
+      {
+        "relPath": "Органы брюшной полости/Свободная жидкость в брюшной полости.md",
+        "sha256": "eda610f750d9def9a45e4f46c834b705975576c44f1680f786489ec3ba381389"
+      },
+      {
+        "relPath": "Органы брюшной полости/Состояние после холецистэктомии.md",
+        "sha256": "62c2b85d29215c6850d2a3da8e826a451e291f6090d4a304319849ba313fa160"
+      },
+      {
+        "relPath": "Органы брюшной полости/Спленомегалия.md",
+        "sha256": "62922939600c09b9e0b3ee9790a5048354475202a942111405ca547b245e1100"
+      },
+      {
+        "relPath": "Органы брюшной полости/Флеш-гемангиома печени.md",
+        "sha256": "552691730532eca425dad6d3ff588338cedeffdd9bd8826d4296b0c20db933a2"
+      },
+      {
+        "relPath": "Органы брюшной полости/Фокальная жировая инфильтрация печени.md",
+        "sha256": "fb5f4a405d09c088098c80b4822d59384d6d73f7821f563746d931701113955c"
+      },
+      {
+        "relPath": "Органы брюшной полости/Формулировка - патологических образований в органах брюшной полости не выявлено.md",
+        "sha256": "4d937c9bdb18b06dabf5470a1153a4334479a3de698654b81e2737583d861401"
+      },
+      {
+        "relPath": "Органы забрюшинного пространства/Почки/Киста почки.md",
+        "sha256": "02fd0fc6c2edc7bd419d521bf765c41c1dc749d4b3a60e4f2f318bef2c04eb6b"
+      },
+      {
+        "relPath": "Органы забрюшинного пространства/Почки/Удвоение чашечно-лоханочной системы.md",
+        "sha256": "847c9b404f8f05b71074aba7587ca455fdba1b70e9d3e9e2977810898948c630"
+      },
+      {
+        "relPath": "Органы забрюшинного пространства/Надпочечники/Аденома надпочечника.md",
+        "sha256": "cf416f35ed80ffb080a41319a3dbe6985e3451d97a4677d3b959b66d75256a4a"
+      },
+      {
+        "relPath": "Органы забрюшинного пространства/Надпочечники/Ангиомиолипома надпочечника.md",
+        "sha256": "c7b4974a746e6389aa8c5b396e0ba5eddd5b40739765fb8213d9f9f464cc9683"
+      },
+      {
+        "relPath": "Органы малого таза/Формулировка - описание органов малого таза у женщин - short.md",
+        "sha256": "7a25cd922fb871881382fa1719a0011daea4dc13765c678a43c6850e32d6a364"
+      },
+      {
+        "relPath": "Органы малого таза/Формулировка - описание органов малого таза у мужчин - short.md",
+        "sha256": "f011cd20da1be219cc241ea946de12b01b06e5c39eb69f8279d925fc8d75584f"
+      }
+    ],
+    "catalogEntryId": "1",
+    "publishedAt": "2026-08-23T17:49:22.709Z",
+    "author": {
+      "displayName": "Roman Shulgha"
+    }
+  }
+}

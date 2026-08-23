@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "packageId": "1",
+      "title": "ОГК, ОБП, ОМТ short",
+      "description": "",
+      "author": {
+        "displayName": "Roman Shulgha"
+      },
+      "latestVersion": "1",
+      "categories": [
+        "chest",
+        "stomach",
+        "taz"
+      ],
+      "updatedAt": "2026-08-23T17:49:22.709Z"
+    },
+    {
       "packageId": "chest ct",
       "title": "Chest CT (space id)",
       "description": "A package whose id contains a space (exercises %20 encoding).",
