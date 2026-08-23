@@ -1,0 +1,17 @@
+{
+  "title": "ОГК, ОБП, ОМТ short",
+  "description": "",
+  "categories": [
+    "chest",
+    "stomach",
+    "taz"
+  ],
+  "author": {
+    "displayName": "Roman Shulgha"
+  },
+  "releases": [
+    {
+      "releaseVersion": "1"
+    }
+  ]
+}
