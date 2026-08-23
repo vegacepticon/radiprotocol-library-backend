@@ -234,6 +234,24 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     return json(502, { ok: false, error: `PR creation failed: ${body.message ?? pr.status}` });
   }
   const prUrl = ((await pr.json()) as { html_url: string }).html_url;
+
+  // Moderation aid: post a structure-preview comment (mermaid flowchart + stats) so the
+  // reviewer sees the protocol's shape at a glance. Best-effort: a failure to post the
+  // comment must NOT fail an otherwise-successful submission.
+  try {
+    const prNumber = parseInt(new URL(prUrl).pathname.split('/').pop() ?? '', 10);
+    if (Number.isFinite(prNumber) && prNumber > 0) {
+      const { buildSubmissionPreviewComment } = await import('../../src/moderation/preview');
+      const commentBody = buildSubmissionPreviewComment(release as never);
+      await gh(`/repos/${repo}/issues/${prNumber}/comments`, {
+        method: 'POST',
+        body: JSON.stringify({ body: commentBody }),
+      });
+    }
+  } catch {
+    // Preview is cosmetic; the PR itself was created successfully.
+  }
+
   return json(200, { ok: true, prUrl, branch });
 };
 

@@ -44,6 +44,18 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: npm run generate
 
+      # Review aid: upload the submitted release bundle(s) so a moderator can download and
+      # import them into Obsidian (Library → Import from file) to click through the
+      # protocol BEFORE merging. Only submission-shaped PRs touch packages/.
+      - name: Upload release bundles for review
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-preview
+          path: |
+            packages/*/releases/*/release.json
+          if-no-files-found: ignore
+
       - name: Wire-type parity (plugin ↔ backend, at the pinned rev)
         run: npm run check:wire-parity
         env:

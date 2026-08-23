@@ -58,10 +58,34 @@ Add a new release directory (`releases/<newVer>/release.json`) and append the ve
 max semver and stamps `updatedAt` from the newest release. Old versions stay downloadable
 (the plugin pins exact versions on install).
 
-## Removing a package
+## Reviewing with a real install (recommended before first merge)
 
-Delete its directory under `packages/`. The next publish regenerates `site/` without it.
-Already-installed copies in users' vaults are unaffected (they're local files).
+The `check` job proves format integrity, but only running a protocol proves it *behaves*
+sensibly. Two-step flow:
+
+1. **Before merge** — download the PR's `release.json` artifact (the CI `check` job
+   uploads it as `release-preview` on every submission PR) or take the file from the PR's
+   Files-changed view. In Obsidian: RadiProtocol → Library → **Import from file…** → pick
+   the JSON. The bundle goes through the SAME journal-before-write installer as registry
+   installs (hash verification included), so you can click through the whole protocol with
+   the runner. Uninstall afterwards via the Library — installed review copies are
+   ordinary owned installs.
+2. **After merge** — install the published release from the Library as a regular user
+   would, and re-run the protocol once against the actually-served bytes.
+
+## Hiding / restoring a package
+
+Hiding keeps the package in the repo (history intact) but removes it from the served
+catalog; restoring is the reverse:
+
+```bash
+npm run hide-package -- <packageId>            # set hidden: true
+npm run hide-package -- <packageId> --unhide   # remove the flag
+```
+
+Then push/merge — the publish job regenerates site/ without the hidden package. Already-
+installed user copies are unaffected (they are local files). Full deletion of the
+`packages/<id>/` directory remains reserved for spam/illegal content.
 
 ## Secrets & configuration
 

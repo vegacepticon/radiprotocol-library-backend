@@ -10,6 +10,11 @@
 // catalog consistency, semver ordering) and throws CatalogValidationError with all errors
 // aggregated. The generator consumes loadPackagesCatalog(); CI runs the same loader as the
 // `check:packages` gate, and the submit proxy runs the same checks before opening a PR.
+//
+// Hidden packages: `hidden: true` in catalog.json keeps the package validated and
+// versioned in the repo but EXCLUDES it from the generated site/ artifacts (catalog.json
+// entries + per-release files are not written). Moderation tool: hide without deleting;
+// restore by removing the flag. The generator filters on LoadedRelease.hidden.
 
 import fs from 'fs';
 import path from 'path';
@@ -32,6 +37,11 @@ export interface PackageCatalog {
   author: { displayName: string };
   /** Declared releases; each must have a matching releases/<ver>/release.json on disk. */
   releases: Array<{ releaseVersion: string; createdAt?: string; publishedAt?: string }>;
+  /**
+   * Moderation flag: when true the whole package stays valid but is EXCLUDED from the
+   * generated site/ artifacts (invisible to plugin users). Repo-only field, never a wire type.
+   */
+  hidden?: boolean;
 }
 
 /** One validated release ready for artifact generation. */
@@ -39,6 +49,8 @@ export interface LoadedRelease {
   manifest: PackageManifest;
   snippetContents: Array<{ relPath: string; content: string }>;
   catalogEntry: CatalogEntry;
+  /** Mirrors PackageCatalog.hidden — the generator drops hidden packages from site/. */
+  hidden: boolean;
 }
 
 /** Aggregated validation failure (all problems listed, not just the first). */
@@ -60,6 +72,7 @@ export function isPackageCatalog(value: unknown): value is PackageCatalog {
   const author = v['author'];
   if (typeof author !== 'object' || author === null || typeof (author as Record<string, unknown>)['displayName'] !== 'string') return false;
   if (!Array.isArray(v['releases']) || v['releases'].length === 0) return false;
+  if (v['hidden'] !== undefined && typeof v['hidden'] !== 'boolean') return false;
   return v['releases'].every((r) => {
     if (typeof r !== 'object' || r === null) return false;
     const rel = r as Record<string, unknown>;
@@ -121,6 +134,7 @@ export async function loadPackagesCatalog(packagesDir = 'packages'): Promise<Loa
       errors.push(`${pkgDir}/catalog.json: fails isPackageCatalog`);
       continue;
     }
+    const hidden = catalogRaw.hidden === true;
 
     const releasesDir = path.join(pkgDir, 'releases');
     let versionDirs: string[] = [];
@@ -201,6 +215,7 @@ export async function loadPackagesCatalog(packagesDir = 'packages'): Promise<Loa
           updatedAt: publishedAt,
           // summary intentionally omitted (optional wire field)
         },
+        hidden,
       });
     }
 
@@ -258,11 +273,13 @@ export function slugifyForNamespace(packageId: string): string {
   return packageId.toLowerCase().trim().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-+|-+$/g, '');
 }
 
-/** Build the catalog.json entries view (deduped per package — one entry per packageId). */
+/** Build the catalog.json entries view (deduped per package — one entry per packageId).
+ *  Hidden packages are dropped here so no served artifact ever references them. */
 export function catalogEntries(releases: LoadedRelease[]): CatalogEntry[] {
   const seen = new Set<string>();
   const entries: CatalogEntry[] = [];
   for (const r of releases) {
+    if (r.hidden === true) continue;
     if (seen.has(r.catalogEntry.packageId)) continue;
     seen.add(r.catalogEntry.packageId);
     entries.push(r.catalogEntry);

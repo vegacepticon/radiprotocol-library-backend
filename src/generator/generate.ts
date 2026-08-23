@@ -35,8 +35,11 @@ function writeJson(filePath: string, value: unknown): void {
  *  @param packagesDir Catalog source directory (default 'packages'). */
 export async function generate(outDir: string = SITE_DIR, packagesDir: string = PACKAGES_DIR): Promise<void> {
   const releases: LoadedRelease[] = await loadPackagesCatalog(packagesDir);
+  // Hidden packages (moderation flag in catalog.json) stay validated but are NOT
+  // written to site/ — neither their catalog entries nor their release artifacts.
+  const visible = releases.filter((r) => r.hidden !== true);
   const entries = [];
-  for (const r of releases) {
+  for (const r of visible) {
     const { manifest, snippetContents, catalogEntry } = r;
     // Mutual-consistency assertions (defense-in-depth; the loader already guarantees these).
     assertCondition(manifest.catalogEntryId === manifest.packageId, `catalogEntryId !== packageId for ${manifest.packageId}`);
@@ -60,9 +63,52 @@ export async function generate(outDir: string = SITE_DIR, packagesDir: string = 
     entries.push(catalogEntry);
   }
   // Write catalog.json: { entries, serverTime } (CatalogResponse — NO wire sentinel; the client stamps it).
+  // entries come from the FULL loaded set via catalogEntries(), which drops hidden packages.
   const catalogBody = { entries: catalogEntries(releases), serverTime: CATALOG_SERVER_TIME };
   assertCondition(isCatalogResponse(catalogBody), 'catalog body fails isCatalogResponse');
   writeJson(path.join(outDir, 'catalog.json'), catalogBody);
+
+  // Prune stale artifacts: release files for packages/versions that are no longer VISIBLE
+  // (deleted, or hidden by moderation) must not linger in site/. Without this, a hidden or
+  // removed package stays downloadable forever (its catalog entry disappears, but the
+  // direct release URL keeps serving bytes). Only the generated packages subtree is
+  // pruned; hand-maintained site/ assets (404.html, _redirects, _headers) are untouched.
+  const visibleIds = new Set(visible.map((r) => r.manifest.packageId));
+  const visibleFiles = new Set(visible.map((r) =>
+    path.join('packages', r.manifest.packageId, 'releases', `${r.manifest.releaseVersion}.json`),
+  ));
+  const visibleManifestDirs = new Set(visible.map((r) =>
+    path.join('packages', r.manifest.packageId, 'releases', r.manifest.releaseVersion),
+  ));
+  // baseDir stays FIXED across recursion so every kept/pruned decision uses one
+  // coordinate system (site/-relative).
+  const baseDir = path.dirname(path.join(outDir, 'packages'));
+  pruneStale(path.join(outDir, 'packages'), baseDir, (rel) => {
+    if (visibleIds.has(rel.split(path.sep)[1] ?? '')) return true;
+    if (visibleFiles.has(rel)) return true;
+    if (visibleManifestDirs.has(rel)) return true;
+    return false;
+  });
+}
+
+/** Recursively delete anything under rootDir that keep(relPath) rejects. relPath is
+ *  platform-relative to baseDir (constant across recursion); directories are removed
+ *  bottom-up once empty. */
+function pruneStale(rootDir: string, baseDir: string, keep: (rel: string) => boolean): void {
+  if (!fs.existsSync(rootDir)) return;
+  for (const entry of fs.readdirSync(rootDir, { withFileTypes: true })) {
+    const full = path.join(rootDir, entry.name);
+    if (entry.isDirectory()) {
+      pruneStale(full, baseDir, keep);
+      if (fs.readdirSync(full).length === 0) fs.rmdirSync(full);
+    } else {
+      const rel = path.relative(baseDir, full);
+      if (!keep(rel)) {
+        fs.rmSync(full);
+        console.warn(`[generator] pruned stale artifact: ${rel}`);
+      }
+    }
+  }
 }
 
 // CLI entrypoint (runs only when invoked as the bundled script, not when imported by tests).

@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
+import { createHash } from 'crypto';
 import { generate } from '../src/generator/generate';
 import { isCatalogResponse, isReleaseResponse } from '../src/wire-types/registry-model';
 import { isPackageManifest } from '../src/wire-types/library-model';
@@ -60,6 +61,84 @@ describe('generator — output validity', () => {
     const manifestOnly = readJson(path.join(outDir, 'packages', 'chest-ct', 'releases', '1.0.0', 'manifest.json')) as Record<string, unknown>;
     expect(Object.keys(manifestOnly)).toEqual(['manifest']);
   });
+});
+
+describe('generator — hidden packages', () => {
+  function makeVaultPkg(pkgDir: string, packageId: string, opts: { hidden?: boolean } = {}): void {
+    const doc = {
+      schema: 'radiprotocol.protocol', version: 1,
+      id: `${packageId}-1`, title: `Pkg ${packageId}`,
+      createdAt: '2026-01-01T00:00:00.000Z', updatedAt: '2026-01-01T00:00:00.000Z',
+      nodes: [{ id: 'n1', kind: 'start', x: 0, y: 0, width: 200, height: 80, fields: {} }],
+      edges: [], layoutDirection: 'LR',
+    };
+    const canonical = JSON.stringify(doc, null, 2) + '\n';
+    const digest = createHash('sha256').update(canonical).digest('hex');
+    const manifest = {
+      schema: 'radiprotocol.package', version: 1,
+      packageId, releaseVersion: '1.0.0',
+      protocolDoc: doc, protocolSha256: digest,
+      snippetFiles: [{ relPath: 's.md', sha256: digest }],
+      catalogEntryId: packageId,
+      author: { displayName: 'A' }, publishedAt: '2026-01-01T00:00:00.000Z',
+    };
+    const content = '# Snippet\n\ntext\n';
+    const sDigest = createHash('sha256').update(content).digest('hex');
+    manifest.snippetFiles[0]!.sha256 = sDigest;
+    fs.mkdirSync(path.join(pkgDir, packageId, 'releases', '1.0.0'), { recursive: true });
+    fs.writeFileSync(
+      path.join(pkgDir, packageId, 'releases', '1.0.0', 'release.json'),
+      JSON.stringify({ manifest, snippetContents: [{ relPath: 's.md', content }] }, null, 2) + '\n',
+    );
+    const cat: Record<string, unknown> = {
+      title: `Pkg ${packageId}`, description: 'desc', categories: ['c'],
+      author: { displayName: 'A' }, releases: [{ releaseVersion: '1.0.0' }],
+    };
+    if (opts.hidden === true) cat['hidden'] = true;
+    fs.writeFileSync(path.join(pkgDir, packageId, 'catalog.json'), JSON.stringify(cat, null, 2) + '\n');
+  }
+
+  it('excludes hidden packages from catalog.json AND skips their release artifacts', async () => {
+    const pkgDir = fs.mkdtempSync(path.join(os.tmpdir(), 'pkgs-'));
+    try {
+      makeVaultPkg(pkgDir, 'visible-one');
+      makeVaultPkg(pkgDir, 'ghost-pkg', { hidden: true });
+      await generate(outDir, pkgDir);
+      const catalog = readJson(path.join(outDir, 'catalog.json')) as { entries: Array<{ packageId: string }> };
+      expect(catalog.entries.map((e) => e.packageId)).toEqual(['visible-one']);
+      expect(fs.existsSync(path.join(outDir, 'packages', 'visible-one', 'releases', '1.0.0.json'))).toBe(true);
+      expect(fs.existsSync(path.join(outDir, 'packages', 'ghost-pkg'))).toBe(false);
+    } finally {
+      fs.rmSync(pkgDir, { recursive: true, force: true });
+    }
+  });
+
+  it('prunes stale artifacts of deleted AND hidden packages on regeneration (no zombie downloads)', async () => {
+    const pkgDir = fs.mkdtempSync(path.join(os.tmpdir(), 'pkgs-'));
+    try {
+      makeVaultPkg(pkgDir, 'kept');
+      makeVaultPkg(pkgDir, 'removed');
+      makeVaultPkg(pkgDir, 'hidden-now', { hidden: false });
+      await generate(outDir, pkgDir); // first pass: everything written
+      expect(fs.existsSync(path.join(outDir, 'packages', 'removed', 'releases', '1.0.0.json'))).toBe(true);
+
+      // Second pass: one package deleted, one hidden.
+      fs.rmSync(path.join(pkgDir, 'removed'), { recursive: true, force: true });
+      makeVaultPkg(pkgDir, 'hidden-now', { hidden: true });
+      await generate(outDir, pkgDir);
+
+      expect(fs.existsSync(path.join(outDir, 'packages', 'kept', 'releases', '1.0.0.json'))).toBe(true);
+      expect(fs.existsSync(path.join(outDir, 'packages', 'removed'))).toBe(false);
+      expect(fs.existsSync(path.join(outDir, 'packages', 'hidden-now'))).toBe(false);
+      const catalog = readJson(path.join(outDir, 'catalog.json')) as { entries: Array<{ packageId: string }> };
+      expect(catalog.entries.map((e) => e.packageId)).toEqual(['kept']);
+    } finally {
+      fs.rmSync(pkgDir, { recursive: true, force: true });
+    }
+  });
+});
+
+describe('generator — determinism', () => {
   it('is deterministic — generating twice produces byte-identical files (raw bytes, ALL files)', async () => {
     await generate(outDir);
     const outDir2 = fs.mkdtempSync(path.join(os.tmpdir(), 'gen-'));

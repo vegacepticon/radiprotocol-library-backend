@@ -20,6 +20,8 @@ async function writePackage(opts: {
   appendReleases?: boolean;
   omitRelease?: boolean;
   corruptHash?: boolean;
+  hidden?: boolean;
+  hiddenNonBoolean?: boolean;
 }): Promise<void> {
   const version = opts.version ?? '1.0.0';
   const doc = {
@@ -61,6 +63,8 @@ async function writePackage(opts: {
       ? (opts.declaredVersions ?? [version])
       : [...(opts.declaredVersions ?? []), version]
     ).map((v) => ({ releaseVersion: v })),
+    ...(opts.hidden === true ? { hidden: true } : {}),
+    ...(opts.hiddenNonBoolean ? { hidden: 'yes' as unknown } : {}),
   };
   fs.writeFileSync(path.join(dir, opts.packageId, 'catalog.json'), JSON.stringify(cat, null, 2) + '\n');
 }
@@ -156,6 +160,34 @@ describe('loadPackagesCatalog — invalid catalogs (aggregated errors)', () => {
       expect(e).toBeInstanceOf(CatalogValidationError);
       expect((e as CatalogValidationError).errors.length).toBeGreaterThanOrEqual(2);
     }
+  });
+});
+
+describe('hidden packages (moderation flag)', () => {
+  it('isPackageCatalog accepts hidden: true / false and rejects non-boolean', () => {
+    expect(isPackageCatalog({ title: 't', description: 'd', categories: ['c'], author: { displayName: 'a' }, releases: [{ releaseVersion: '1.0.0' }], hidden: true })).toBe(true);
+    expect(isPackageCatalog({ title: 't', description: 'd', categories: ['c'], author: { displayName: 'a' }, releases: [{ releaseVersion: '1.0.0' }], hidden: false })).toBe(true);
+    expect(isPackageCatalog({ title: 't', description: 'd', categories: ['c'], author: { displayName: 'a' }, releases: [{ releaseVersion: '1.0.0' }], hidden: 'yes' })).toBe(false);
+  });
+
+  it('loads a hidden package with full validation and hidden=true on every release', async () => {
+    await writePackage({ packageId: 'chest-ct', hidden: true, corruptHash: true });
+    await expect(loadPackagesCatalog(dir)).rejects.toBeInstanceOf(CatalogValidationError); // hash still validated
+    await writePackage({ packageId: 'chest-ct', hidden: true }); // fix the hash, keep the flag
+    const releases = await loadPackagesCatalog(dir);
+    expect(releases).toHaveLength(1);
+    expect(releases[0]!.hidden).toBe(true);
+    expect(catalogEntries(releases)).toHaveLength(0); // invisible in catalog entries
+  });
+
+  it('visible packages keep hidden=false and appear in catalogEntries', async () => {
+    await writePackage({ packageId: 'alpha' });
+    await writePackage({ packageId: 'beta', hidden: true });
+    const releases = await loadPackagesCatalog(dir);
+    expect(releases).toHaveLength(2);
+    const entries = catalogEntries(releases);
+    expect(entries.map((e) => e.packageId)).toEqual(['alpha']);
+    expect(releases.find((r) => r.manifest.packageId === 'alpha')!.hidden).toBe(false);
   });
 });
 

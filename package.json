@@ -12,6 +12,7 @@
     "check:wire-parity": "node scripts/check-wire-parity.mjs",
     "check:regen-diff": "node scripts/check-regen-diff.mjs",
     "check:packages": "node scripts/check-packages.mjs",
+    "hide-package": "node scripts/hide-package.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run typecheck && npm run check:packages && npm run check:regen-diff && npm run check:wire-parity && npm test",
